@@ -1,0 +1,13 @@
+# exclude all intermediate LaTeX-files
+*.aux
+*.log
+*.lot
+*.toc
+*.lot
+*.out
+
+# exclude the generated PDF
+Spec.pdf
+
+# exclude emacs backup files
+*.*~
