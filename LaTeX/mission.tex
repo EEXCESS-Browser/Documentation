@@ -1,0 +1,116 @@
+\chapter{\SECH--Browser}
+
+\section{Projektziel}
+Das Web besteht aus einer Vielzahl von Seiten mit
+Informationen. Betrachtet man diese Seiten genauer, so stellt man
+fest, dass ihr informationstragender Inhalt praktisch immer statisch
+ist.  Er wird Zeitpunkt der Erstellung der Web--Seite von einem Autor
+festgelegt und bleibt bis zum nächsten Update in genau dieses
+Zustand. Auch wenn die Seiten dynamisch generiert werden, der dafür
+verwendete Inhalt ist vorher von einem Autor geliefert worden.  Dass
+diese Informationen statisch sind bedeutet auch, dass die Seiten für
+alle Betrachter weltweit identisch sind.
+
+Ziel des \SECH--Browsers ist es, diese statische Präsentation der
+Informationen aufzuheben und die von einem Autor vorgegebenen Inhalte
+automatisch um benutzerspezifische Informationen, den
+\emph{\SECH--Annotations}\footnote{\SECH steht dabei für \textbf{S}elf
+  \textbf{E}mbeding \textbf{C}haracteristic \textbf{H}yperlinks.}, zu
+ergänzen. Er folgt damit der Idee des \glqq taking the content to the
+user\grqq\footnote{http://eexcess.eu} des EEXCESS--Projektes.
+
+
+Die Auswahl der zusätzlichen Informationen wird dabei von dem
+\SECH--Browser, also dem Client, und nicht dem Server
+vorgenommen. Personenbezogene Daten verlassen also nur dann den
+eigenen Rechner, wenn es für die Suche nach den Daten der
+\SECH--Annotations zwingend notwendig ist. Somit ist ein Maximum an
+Datenschutz gegeben.
+
+In der ersten Version basiert die Erzeugung der \SECH--Annotations
+durch den \SECH--Brwoser auf Informationen, die der Seitenautor in
+einem speziellen Format im Text hinterlegt hat. Diese Informationen,
+die \SECH--Tags, verwendet der \SECH--Browser dazu, benutzerspezifische
+Anfragen an eine Wissensquelle, beispielsweise dem Privacy--Proxy des
+EEXCESS--Projektes (\url{http://eexcess.eu}), zu stellen und mit den
+Ergebnissen die ursprüngliche Darstellung der WWW--Seite zu
+ergänzen. 
+
+In den weiteren Entwicklungsschritten soll der \SECH--Browser dann die
+für die Erzeugung der \SECH--Annotations notwendigen Informationen
+selbständig aus den Textinhalten ableiten. Dafür können dann
+beispielsweise Techniken aus den Bereichen des Text-- beziehungsweise
+Opinion--Minings verwendet werden.
+
+\subsection{Anwendungsszenarien}
+Im folgenden soll an Hand von einigen Beispielen dargestellt werden,
+wie die zusätzlichen Funktionalitäten des \SECH--Browsers den Anwender
+unterstützen können.
+
+\subsubsection{Fremdenverkehr}
+Web--Seiten von Fremdenverkehrsverbänden werden von einer 
+Vielzahl von verschiedenen Benutzergruppen besucht:
+\begin{itemize}
+     \item Besucher, die im näheren Umkreis leben.
+     \item Besucher von weiter her.
+     \item Besuchern mit unterschiedlichen Muttersprachen.
+     \item Besucher verschiedener Altergruppen.
+     \item ...
+\end{itemize}
+Die verschiedenen Benutzergruppen haben in der Regel auch verschiedene
+Anforderungen an die zur Verfügung gestellten Informationen:
+\begin{itemize}
+     \item Ein Besucher, der nicht im näheren Umkreis lebt, benötigt
+    in der Regel eher Informationen über die Hotels des Gebietes als ein
+    Besucher aus dem Umkreis.
+     \item Während Jugendliche sich eher für die Angebote aus dem Bereich
+    der Fun--Sport--Arten interessieren, könnten Senioren eher an
+    Informationen über die kulturellen Angebote der Region
+    interessiert sein.
+     \item Fremdsprachige Benutzer sollten vorrangig Informationen in
+    ihrer Landessprache präsentiert werden.
+\end{itemize}
+
+Liegt ein gutes Design der Web--Seite vor, können die Besucher weitere Teile
+der für sie relevanten Daten durch entsprechende Verlinkungen auf
+andere Web--Seiten finden. Aber auch diese zusätzlichen Informationen
+sind statisch, für alle Besucher der Seite identisch und somit nicht
+an die Bedürfnisse der einzelnen Besucher angepasst.
+
+Wie man sieht ist es auch in diesem Anwendungsfall für den Besucher
+der Seite hilfreich, wenn der \SECH--Browser an Hand der ihm bekannten
+benutzerspezifischen Informationen selbständig erkennt, welche
+zusätzlichen Informationen für den Besucher interessant sein könnten
+und diese dann entsprechend aufbereitet darstellen.
+
+\subsubsection{Noch einer}
+
+\section{Aufgabenstellung Wintersemester 2015/16}
+Die im Wintersemester 2015/16 zu entwickelnde Version des
+\SECH--Browsers umfasst folgende Schritte:
+\begin{enumerate}
+     \item Erstellung eines iOS--Programms zur Darstellung von
+    Web--Seiten.
+     \item Erstellung eines iOS/OS X Programms zur Generierung von
+    Anfragen an den Privacy--Proxy des EEXCESS--Projekts und der
+    Darstellung der jeweiligen Antworten.
+     \item Definition der Syntax und Semantik des \SECH--Tags
+    zur Beschreibung der vom Autor vorgegebenen Informationen zur
+    Erstellung einer \SECH--Annotation.
+     \item Erzeugung der um benutzerorientierte Informationen
+    angereicherten Anfragen für den Privacy--Proxy.
+     \item Integration der einzelnen Teilsysteme in einen lauffähigen
+    Prototypen. 
+\end{enumerate}
+Für die Software--Bausteine sind entsprechende Spezifikations--,
+Konstruktions-- und Testdokumente zu erstellen. Diese Dokumente
+orientieren sich an den Inhalten der Vorlesung \glqq Software
+Engineering II\grqq.
+ 
+Erweiterungen, wie beispielsweise
+\begin{enumerate}
+     \item Rating des Benutzers über die Güte der \SECH--Annotations einholen;
+     \item Verwendung des Ratings um darauf folgende, ähnliche
+    \SECH--Annotations zu verbessern;
+\end{enumerate}
+können in das Projekt einfließen.
