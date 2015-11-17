@@ -1,0 +1,16 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+
+\begin{document}
+\chapter{Bestimmung der Linzenzen der erweiternden Daten}
+Für einige Benutzer des EEXCESS-Browsers ist es für die weitere Verwendung der erweiternden Daten notwendig zu wissen, welchen Lizenzen diese unterliegen. Hierfür wird die Methode „getLicenceType(licenseURL: String) ->LicenceType“ verwendet. Diese Methode erhält als Eingabeparameter die URL der Lizenz des jeweiligen Objekts als String, welche vom EEXCESS-Server zurückgeliefert wird, und liefert einen Enum-Type zurück. Als Enum-Type sind folgende verfügbar:
+\begin{itemize}
+\item CreativeCommon
+\item Restricted
+\item Europeana
+\item Other
+\end{itemize}
+
+Diese Lizenzen geben an, ob die Daten ohne Weiteres für andere Zwecke verwendet werden dürfen oder irgendwelchen Lizenzbestimmungen unterliegen.
+\end{document}
