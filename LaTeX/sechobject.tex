@@ -1,19 +1,17 @@
-\chapter{EEXCESS-Browser}
-
 \section{Erstellung des Sechobjects}
 
-\includegraphics[scale=1]{sechobject.png}
+\includegraphics[scale=0.6]{sechobject.png}
 
-Ablauf:
-Sobald der User eine gÃ¼ltige URL eingibt und lÃ¤dt, wird die Laderoutine (loadRequest())
-angestoÃŸen. Ist die Seite fertig geladen wird in der Delegatemethode webViewDidFinishLoad()
-des WebViewDelegates das Auslesen bzw. Laden der Sechtags begonnen.
-Dem SechManager wird der HTML-Head und â€“Body der eben geladenen Website Ã¼bergeben und es
-werden mit Hilfe des HTMLManagers Sechobjekte erstellt. Diese Sechobjekte werden in einem
-Dictionary zurÃ¼ckgegeben.
-Die setFinishMethod()-Methode bereitet den MainController darauf vor, asynchron eine Methode
-im WebViewDelegate aufzurufen, sobald die Sechobjekte durch die Response erweitert worden
-sind. Der Prozess der EEXCESS-Abfrage wird dann durch die Methode createJSONForRequest() mit
-dem Parameter des Sechdictionarys angestoÃŸen. Sobald dann die Elemente erweitert wurden ruft
-der MainController die setFinishMethod() des WebViewDelegates auf und die Liste der Sechtags
+\textbf{Ablauf:}
+Sobald der User eine gültige URL eingibt und lädt, wird die Laderoutine \Verb|loadRequest()|
+angestoßen. Ist die Seite fertig geladen wird in der Delegatemethode \Verb|webViewDidFinishLoad()|
+des WebViewDelegates das Auslesen bzw. Laden der \SEACH-Tags begonnen.
+Dem \SEACH-Manager wird der HTML-Head und Body der eben geladenen Website übergeben und es
+werden mit Hilfe des HTMLManagers \SEACH-Objekte erstellt. Diese \SEACH-Objekte werden in einem
+Dictionary zurückgegeben.
+Die \Verb|setFinishMethod()|-Methode bereitet den MainController darauf vor, asynchron eine Methode
+im WebViewDelegate aufzurufen, sobald die \SEACH-Objekte durch die Response erweitert worden
+sind. Der Prozess der EEXCESS-Abfrage wird dann durch die Methode \Verb|createJSONForRequest()| mit
+dem Parameter des \SEACH-Dictionarys angestoßen. Sobald dann die Elemente erweitert wurden ruft
+der MainController die \Verb|setFinishMethod()| des WebViewDelegates auf und die Liste der \SEACH-Tags
 im UI wird aktualisiert.

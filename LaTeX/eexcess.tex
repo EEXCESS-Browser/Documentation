@@ -6,7 +6,7 @@ dem Austausch von JSON--Objekten. Im Rahmen des
 Privacy--Proxy--Service\footnote{Im Folgenden mit PP--Service
   abgekürzt.}  in Anspruch genommen. Die dafür benötigten
 JSON--Objekte sind in der Online--Dokumentation des EEXCESS--Projektes
-auf Github beschrieben.
+auf GitHub beschrieben.
 
 \section{Informationsanfrage}
 Informationsanfragen an den PP--Server geschehen in der Regel in zwei
@@ -22,22 +22,22 @@ Schritten.
 Im ersten Schritt wird eine durch Suchparameter beschriebene
 \Verb|/recommend|--Anfrage an der Server gestellt. Die Antwort darauf
 besteht aus einem JSON--Objekt. Es enthält, neben den eigentlichen
-Ergebnissen der Suchanfrage, auch eine eineindeutige Id zur späteren
+Ergebnissen der Suchanfrage, auch eine eineindeutige ID zur späteren
 Referenzierung der Anfrage. Die zurückgelieferten Ergebnisse bestehen
 ihrerseits wieder aus verschiedenen Elementen, unter anderem einem
 Titel der das Element näher beschreibt, einer URI die angibt wo das
-Objekt gespeichert ist und einer eineindeutigen Id zur Referenzierung
+Objekt gespeichert ist und einer eineindeutigen ID zur Referenzierung
 des Objekts. Diese Informationen würden bereits ausreichen, um die einzelnen
 Ergebnisse der Suchanfrage aus dem Netz zu laden. Da der Benutzer aber
 selber entscheiden soll, ob die angezeigten Zusatzinformationen für
 ihn interessant sein könnten, muss er vor der Darstellung eine Auswahl
-treffen können. Dies ist an Hand des Titels in der Regel nur schwer
+treffen können. Dies ist anhand des Titels in der Regel nur schwer
 möglich!
 
 In einem zweiten, optionalen Schritt kann daher für jedes Ergebnis
 einer \Verb|/recommend|--Anfrage eine detaillierte Kurzbeschreibung
 vom PP--Server abgerufen werden. Der dafür vorgesehene
-\Verb|/getDetails|--Befehl übergibt die Id der Suchanfrage und die
+\Verb|/getDetails|--Befehl übergibt die ID der Suchanfrage und die
 \Verb|documentBadge|--Informationen des ursprünglichen Ergebnisses an
 den PP--Server und bekommt, falls bei der Datenquelle hinterlegt, eine
 Kurzbeschreibung des Ergebnisses. An Hand dieser Kurzbeschreibung kann
@@ -72,10 +72,10 @@ Parameter verwendet:
     eingrenzen zu können.
 \end{enumerate}
 
-Falls vom PP--Server unterstützt, sollen auch folgende Parameter zur
-näheren Beschreibung der Suchanfrage verwendet werden:
-\begin{itemize}
-     \item \Verb|ageRange|
-     \item \Verb|gender|
-     \item \Verb|address|
-\end{itemize}
+%Falls vom PP--Server unterstützt, sollen auch folgende Parameter zur
+%näheren Beschreibung der Suchanfrage verwendet werden:
+%\begin{itemize}
+%     \item \Verb|ageRange|
+%     \item \Verb|gender|
+%     \item \Verb|address|
+%\end{itemize}

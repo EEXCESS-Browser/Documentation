@@ -47,6 +47,7 @@
 % #################################################################
 
 \def\SECH{S\kern-.075em \lower.5ex\hbox{E}\kern-0.05em CH\xspace}
+\def\SEACH{S\kern-.075em \lower.5ex\hbox{E}\kern-0.05em ACH\xspace}
 
 % #################################################################
 
@@ -59,8 +60,8 @@
 Spezifikation, Konstruktion
 }
 
-\author{Prof.~Dr.~Peter~St"ohr}
-\date{Version 0.1}
+\author{Prof. Dr. Peter Stöhr \and Gottfried von Recum \and Alexander Pöhlmann \and Tim Pohrer \and Lothar Mödl \and Burak Erol \and Brian Mairhörmann \and Andreas Netsch \and Philipp Winterholler \and Patrick Büttner \and Andreas Ziemer}
+\date{Version 0.1.1}
 
 % #################################################################
 
@@ -75,9 +76,12 @@ Spezifikation, Konstruktion
 \newpage
 \pagenumbering{arabic}
 
+\part*{Einleitung}
 \include{intro}
 \include{mission}
 \include{eexcess}
+\part*{Spezifikation}
 \include{funktion-browser}
+\part*{Konstruktion}
 \include{sechobject}
 \end{document}
