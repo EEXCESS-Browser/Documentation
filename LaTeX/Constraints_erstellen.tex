@@ -1,0 +1,38 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german, ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[figurename=Bild]{caption}
+\usepackage{inputenc}
+\usepackage{geometry}
+
+
+%opening
+\title{Constraints erstellen}
+\author{Burak Erol, Philipp Winterholler}
+
+\begin{document}
+
+\section{Constraints erstellen}
+
+Damit die Bedienelemente und das UI vom Browser auf verschiedenen Endgeräten identisch dargestellt wird, müssen Constraints gesetzt werden. Somit wird eine dynamische, und bei bestimmten Bedienelementen, eine feste Position gesetzt bzw. angepasst. Komplikationen mit den schon vorhandenen Constraints vom Container im Hintergrund waren vorhanden, somit mussten alle Constraints gelöscht und neu erstellt werden. Nachdem das WK-Webview dennoch keine Höhe und Breite vom Container im Hintergrund angenommen hatte (Vermutung: Im main.storyboard nicht verwendete Constraints, die das Layout ungewollt ändern), musste der Navigation Controller gelöscht und erneut integriert werden. Hierzu wurden folgende Schritte beachtet:
+
+- Referenzen der Bedienelemente im main.storyboard und im ViewController löschen 
+- Menüleiste samt Buttons im main.storyboard löschen 
+- Tabelle/Zellen löschen
+- Container im Hintergrund löschen
+- Navigation Controller ausklinken und entfernen
+
+Navigation Controller neu erstellen:
+- Menüleiste samt Buttons einfügen und feste Constraints setzen
+- Container einfügen und feste Constraints setzen
+- Tabelle/Zellen einfügen und feste Constraints setzen
+- Referenzen neu verlinken und alles wieder in den ViewController integrieren
+
+Nach erfolgreichem absolvieren dieser Schritte wurden im ViewController zwei Contraints erzeugt. Diese dienen für die Zuweisung der Höhe und Breite vom Container auf den darüber liegenden WKWebView, welches programmatisch erzeugt wird. Ändern sich die Constraints vom Container, beispielsweise beim rotieren des Endgerätes, so ändert sich auch Höhe und Breite des WKWebViews. 
+
+\includegraphics[width=12cm]{Pics/WKWebView_Hochformat}
+\newpage
+\includegraphics[width=12cm]{Pics/WKWebView_Querformat}
+
+\end{document}
