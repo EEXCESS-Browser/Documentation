@@ -8,12 +8,12 @@
 
 
 %opening
-\title{Constraints erstellen}
+\title{Constraints setzen}
 \author{Burak Erol, Philipp Winterholler}
 
 \begin{document}
 
-\section{Constraints erstellen}
+\section{Constraints setzen}
 
 Damit die Bedienelemente und das UI vom Browser auf verschiedenen Endgeräten identisch dargestellt wird, müssen Constraints gesetzt werden. Somit wird eine dynamische, und bei bestimmten Bedienelementen, eine feste Position gesetzt bzw. angepasst. Komplikationen mit den schon vorhandenen Constraints vom Container im Hintergrund waren vorhanden, somit mussten alle Constraints gelöscht und neu erstellt werden. Nachdem das WK-Webview dennoch keine Höhe und Breite vom Container im Hintergrund angenommen hatte (Vermutung: Im main.storyboard nicht verwendete Constraints, die das Layout ungewollt ändern), musste der Navigation Controller gelöscht und erneut integriert werden. Hierzu wurden folgende Schritte beachtet:
 
