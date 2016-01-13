@@ -1,0 +1,59 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german, ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[figurename=Bild]{caption}
+\usepackage{inputenc}
+\usepackage{geometry}
+\usepackage{listings}
+
+
+%opening
+\title{WkWebView JavaScript}
+\author{Andreas Netsch}
+
+\begin{document}
+
+\section{ WkWebKit JavaScript}
+
+WkWebKit ersetzt den ursprünglichen UIWebView und wurde in unserer App nachträglich hinzugefügt, da war anfangs einen UIWebView verwendet haben. Dieser bietet aber weniger funktionen und wird somit von Apple nicht mehr empfohlen. Die Einbindung des WkWebView ist zum derzeitigen Stand jedoch noch nicht über den Interface Builder möglich und muss somit programatisch erstellt werden.
+Erzeugen der verwendeten Variable myWebView als WKWebView:
+\begin{verbatim}
+var myWebView: WKWebView?
+\end{verbatim}
+Zuweisung des WebViewDelegates ind er Funktion viewDidLoad():
+\begin{verbatim}
+myWebViewDelegate = WebViewDelegate()
+myWebViewDelegate.viewCtrl = self
+\end{verbatim}
+Um JavaScript in die WkWebView einzubinden muss eine WkWebViewConfiguration erstellt werden:
+\begin{verbatim}
+let config = WKWebViewConfiguration()
+\end{verbatim}
+Als nächstes muss der Pfad der JavaScript Datei angegeben werden mit dieser wird der ScriptContent extrahiert. Des weiteren muss der Zeitpunkt des Einfügens in das Dokument angegeben werden. Dies wird der WkWebViewConfiguration hinzugefügt genauso wie ein ScriptMessageHandler der auf klick Ereignisse reagiert:
+\begin{verbatim}
+let scriptURL = NSBundle.mainBundle().pathForResource("main", ofType:
+ "js")
+ 
+let scriptContent = try! String( contentsOfFile: scriptURL!, encoding:
+NSUTF8StringEncoding)
+
+let script = WKUserScript(source: scriptContent, injectionTime: 
+.AtDocumentStart, forMainFrameOnly: true)
+
+config.userContentController.addUserScript(script)
+        
+config.userContentController.addScriptMessageHandler(self, name:
+ "onclick")
+\end{verbatim}
+Die WkWebViewConfiguration hat nun alle erforderlichen Komponenten und kann zusammen mit der Angabe des Frames welcher hier die Grenzen des ContinerViews sind als SubView des ContainerViews gesetzt werden:
+\begin{verbatim}
+
+self.myWebView = WKWebView(frame: containerView.bounds,
+configuration: config)
+self.containerView.addSubview(myWebView!)
+\end{verbatim}
+
+
+\pagebreak
+\end{document}
