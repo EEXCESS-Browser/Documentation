@@ -1,57 +1,147 @@
-\chapter{EEXCESS-Browser}
+\chapter{Testen der Applikation}
 
-\section{Testfälle}
+\section{Einleitung}
 
+Zum Testen der Applikation 'SEARCH-Tag-Browser' ist es erforderlich, die in einer exemplarisch erzeugten Webseite (www.sech-browser.de/tests) eingebetten SEARCH-Tags zu überprüfen. Um idealerweise alle Problemfelder bzw. Fehler der App erkennen zu können, ist es erforderlich eine bestmögliche Abdeckung aller möglichen Testfällen zu gewährleisten.  
 
-\centering \textbf{{\large Testfälle}}
+\section{Testfälle} 
+
+Um eine eine bestmögliche Überprüfung der App zu erreichen, wurde eine systematische Implementierung aller denkbaren Testfälle unter \url {http://www.sech-browser.de/old-index.html} vorgenommen. Wie aus der Definition der SEARCH-Tags (s. WIKI des des github-Projektordners) ersichtlich, besteht das SEARCH-Tag aus den drei Teilen:
+
+\begin {itemize} 
+   \item search-head
+   \item search-section
+   \item search-link
+\end {itemize}
+
+Weiterhin kann jeder Teil des SEARCH-Tags bis zu 5 Attribute enthalten:
+
+\begin {itemize}
+   \item topic
+   \item type
+   \item media-type
+   \item provider
+   \item licence
+\end {itemize}
+
+Um alle möglichen realisierten Kombinationen der Teile der SEARCH-Tags mit den zugehörigen Attributen aufrufen zu können, wurde eine übersichtliche Menüstruktur gewählt. Zusätzlich wurden im letzten Menüpunkt 'Fehler' noch syntaktische Fehler in den Tags eingebaut, wie Weglassen von Tag-Klammern (< oder >) sowie Weglassen von Anführungszeichen von Attributen oder falsch geschriebene Attributnamen.   
+Die Menu-Struktur der Testfälle ist nachfolgend dargestellt:
+
+\pagebreak
+
+\centering \textbf{{\large Menü -- Testfälle}}
+
+% ----------- Hauptmenu ------------------
+
+% ---------- keine search-tags --------------------
+
+\flushleft \textbf{keine search-tags}
+
+% ---------- search-head --------------------
+
+\flushleft \textbf{nur search-head}
 \begin{enumerate}
-\item ohne Search-Tags
-\flushleft \textbf{search-head}
+   \item mit allen Attributen
+   \item mit einzelnen Attributen  
+   
+   \begin{enumerate}  % einzelne Attribute        
+        \item nur Topic  
+        \begin{itemize}
+           \item mit Umlauten
+           \item mit Leerzeichen
+           \item mit Sonderzeichen
+           \item mit Ziffern
+        \end{itemize}
+     
+        \item nur Type
+        \begin{itemize}
+           \item mit Umlauten
+           \item mit Leerzeichen
+           \item mit Sonderzeichen
+           \item mit Ziffern
+        \end{itemize}
+	
+        \item nur mediaType
+        \begin{itemize}
+           \item mit Umlauten
+           \item mit Leerzeichen
+           \item mit Sonderzeichen
+           \item mit Ziffern
+        \end{itemize}
+  
+        \item nur Provider
+        \begin{itemize}
+           \item mit Umlauten
+           \item mit Leerzeichen
+           \item mit Sonderzeichen
+           \item mit Ziffern
+        \end{itemize}
+  
+        \item nur Licence
+        \begin{itemize}
+           \item mit Umlauten
+           \item mit Leerzeichen
+           \item mit Sonderzeichen
+           \item mit Ziffern
+        \end{itemize}
+    \end{enumerate} % einzelne Attribute
+    \item mit mehreren Attributen
+    \begin{enumerate}
+        \item Topic, Type
+	     \item Topic, Type, mediaType
+	     \item Topic, Type, mediaType, Provider
+     \end{enumerate}
+  \end{enumerate} % search-head
 
-\end{enumerate}
+\pagebreak
+
+% ---------- search-section --------------------
+
+\flushleft \textbf{nur search-section}
+
 \begin{enumerate}
   \item mit allen Attributen
   \item mit einzelnen Attributen
 
-   \begin{enumerate}[label*=\arabic*.]
+   \begin{enumerate}
     \item nur Topic  
-    \begin{enumerate}[label*=\arabic*.]
+    \begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-\end{enumerate}
+\end{itemize}
 	\item nur Type
- 	\begin{enumerate}[label*=\arabic*.]
+ 	\begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-\end{enumerate}
+\end{itemize}
 	\item nur mediaType
-	\begin{enumerate}[label*=\arabic*.]
+	\begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-    \end{enumerate}
+    \end{itemize}
     \item nur Provider
-	\begin{enumerate}[label*=\arabic*.]
+	\begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-    \end{enumerate}
+    \end{itemize}
     \item nur Licence
-	\begin{enumerate}[label*=\arabic*.]
+	\begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-    \end{enumerate}
+    \end{itemize}
 \end{enumerate}
-\item mit einzelnen Attributen
-\begin{enumerate}[label*=\arabic*.]
+\item mit mehereren Attributen
+\begin{enumerate}
     \item Topic, Type
 	\item Topic, Type, mediaType
 	\item Topic, Type, mediaType, Provider
@@ -60,112 +150,63 @@
 
 \pagebreak
 
+% ---------- search-link --------------------
 
-\flushleft \textbf{search-section}
-
-\begin{enumerate}
-  \item mit allen Attributen
-  \item mit einzelnen Attributen
-
-   \begin{enumerate}[label*=\arabic*.]
-    \item nur Topic  
-    \begin{enumerate}[label*=\arabic*.]
-    \item mit Umlauten
-    \item mit Leerzeichen
-    \item mit Sonderzeichen
-    \item mit Ziffern
-\end{enumerate}
-	\item nur Type
- 	\begin{enumerate}[label*=\arabic*.]
-    \item mit Umlauten
-    \item mit Leerzeichen
-    \item mit Sonderzeichen
-    \item mit Ziffern
-\end{enumerate}
-	\item nur mediaType
-	\begin{enumerate}[label*=\arabic*.]
-    \item mit Umlauten
-    \item mit Leerzeichen
-    \item mit Sonderzeichen
-    \item mit Ziffern
-    \end{enumerate}
-    \item nur Provider
-	\begin{enumerate}[label*=\arabic*.]
-    \item mit Umlauten
-    \item mit Leerzeichen
-    \item mit Sonderzeichen
-    \item mit Ziffern
-    \end{enumerate}
-    \item nur Licence
-	\begin{enumerate}[label*=\arabic*.]
-    \item mit Umlauten
-    \item mit Leerzeichen
-    \item mit Sonderzeichen
-    \item mit Ziffern
-    \end{enumerate}
-\end{enumerate}
-\item mit einzelnen Attributen
-\begin{enumerate}[label*=\arabic*.]
-    \item Topic, Type
-	\item Topic, Type, mediaType
-	\item Topic, Type, mediaType, Provider
-    \end{enumerate}
-\end{enumerate}
-
-\pagebreak
-
-\flushleft \textbf{search-link}
+\flushleft \textbf{nur search-link}
 
 \begin{enumerate}
   \item mit allen Attributen
   \item mit einzelnen Attributen
 
-   \begin{enumerate}[label*=\arabic*.]
+   \begin{enumerate}
     \item nur Topic  
-    \begin{enumerate}[label*=\arabic*.]
+    \begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-\end{enumerate}
+\end{itemize}
 	\item nur Type
- 	\begin{enumerate}[label*=\arabic*.]
+ 	\begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-\end{enumerate}
+\end{itemize}
 	\item nur mediaType
-	\begin{enumerate}[label*=\arabic*.]
+	\begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-    \end{enumerate}
+    \end{itemize}
     \item nur Provider
-	\begin{enumerate}[label*=\arabic*.]
+	\begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-    \end{enumerate}
+    \end{itemize}
     \item nur Licence
-	\begin{enumerate}[label*=\arabic*.]
+	\begin{itemize}
     \item mit Umlauten
     \item mit Leerzeichen
     \item mit Sonderzeichen
     \item mit Ziffern
-    \end{enumerate}
+    \end{itemize}
 \end{enumerate}
-\item mit einzelnen Attributen
-\begin{enumerate}[label*=\arabic*.]
+\item mit mehreren Attributen
+\begin{enumerate}
     \item Topic, Type
-	\item Topic, Type, mediaType
-	\item Topic, Type, mediaType, Provider
-    \end{enumerate}
+	 \item Topic, Type, mediaType
+	 \item Topic, Type, mediaType, Provider
+\end{enumerate}
 \end{enumerate}
 
+
 \pagebreak
+
+% ------------- search-head und search-section ----------------------
 
 \textbf{search-head und search-section} 
 \begin{enumerate}
@@ -176,38 +217,45 @@
 	\item mit Ziffern
 \end{enumerate}
 
+% ------------- search-head und search-link ----------------------
+
 \textbf{search-head und search-link} 
 \begin{enumerate}
-\item Standard
-\item mit Umlauten
-\item mit Leerzeichen
-\item mit Sonderzeichen
-\item mit Ziffern
+   \item Standard
+   \item mit Umlauten
+   \item mit Leerzeichen
+   \item mit Sonderzeichen
+   \item mit Ziffern
 \end{enumerate}
+
+% ------------- search-section und search-link ----------------------
 
 \textbf{search-section und search-link} 
 \begin{enumerate}
-\item Standard
-\item mit Umlauten
-\item mit Leerzeichen
-\item mit Sonderzeichen
-\item mit Ziffern
+   \item Standard
+   \item mit Umlauten
+   \item mit Leerzeichen
+   \item mit Sonderzeichen
+   \item mit Ziffern
 \end{enumerate}
+
+
+% ------------- search-head, search-section und search-link ----------------------
 
 \textbf{search-head, search-section, search-link}
 \begin{enumerate}
-\item Standard
-\item mit Umlauten
-\item mit Leerzeichen
-\item mit Sonderzeichen
-\item mit Ziffern
+   \item Standard
+   \item mit Umlauten
+   \item mit Leerzeichen
+   \item mit Sonderzeichen
+   \item mit Ziffern
 \end{enumerate}
 
 \pagebreak
 
 \textbf{{\large Fehler}}
 
-\textbf{search-head}
+\textbf{nur search-head}
 \begin{enumerate}
 \item Anführungszeichen vorne fehlt
 \item Anführungszeichen hinten fehlt
@@ -215,7 +263,7 @@
 \item Tag-Klammer hinten fehlt
 \end{enumerate}
 
-\textbf{search-section}
+\textbf{nur search-section}
 \begin{enumerate}
 \item Anführungszeichen vorne fehlt
 \item Anführungszeichen hinten fehlt
@@ -225,7 +273,7 @@
 \item Ende Tag-Klammer hinten fehlt
 \end{enumerate}
 
-\textbf{search-link}
+\textbf{nur search-link}
 \begin{enumerate}
 \item Anführungszeichen vorne fehlt
 \item Anführungszeichen hinten fehlt
