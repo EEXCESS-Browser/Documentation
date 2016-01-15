@@ -44,7 +44,38 @@ self.myWebView = WKWebView(frame: containerView.bounds,
 configuration: config)
 self.containerView.addSubview(myWebView!)
 \end{verbatim}
+Somit werden auch die Constraints nur für den ContainerView gesetzt.
+Die Funktion userContentController(...) empfängt Nachrichten von JavaScript fügt diese der var headline hinzu und vergleicht die die SechTags mit der headline und öffnet den PopView mit dem angeklickten SachTag:
+\begin{verbatim}
 
+    func userContentController(userContentController: WKUserContentController,
+        didReceiveScriptMessage message: WKScriptMessage) {
+            print("JavaScript is sending a message \(message.body)")
+            self.headLine = message.body as! String
+            
+            let sechTags = tableViewDataSource.sechTags
+            
+            for(var i = 0; i < sechTags.count; i++){
+                if(sechTags[i] == self.headLine){
+                    self.indexPathForSelectedSearchTag = i
+                }
+            }            
+            performSegueWithIdentifier("showPopView", sender: self)
+    }
+\end{verbatim}
+Die Implementiere JavaScript-Datei main.js sucht html Tags der Art "search-Link" und markiert diese Rot, und sendet eine Nachricht an das wkWebkit wenn ein sech-Tag angeklickt wird:
+\begin{verbatim}
+
+window.onload = function() {    
+    var elements = document.getElementsByTagName("search-link");
+    for (var i=0; i<elements.length;i++){
+        elements[i].style.color = "Red";
+        elements[i].addEventListener("click", function(){
+            var currentTopic = this.getAttribute("topic");
+            webkit.messageHandlers.onclick.postMessage(currentTopic);});
+    }
+}
+\end{verbatim}
 
 \pagebreak
 
