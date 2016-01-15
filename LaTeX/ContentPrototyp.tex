@@ -1,13 +1,4 @@
-\documentclass[a4paper,10pt]{article}
-%\documentclass[a4paper,10pt]{scrartcl}
 
-\usepackage[utf8]{inputenc}
-\usepackage{multicol}
-\usepackage{multido}
-\usepackage{hyperref}
-\usepackage{graphicx}
-
-\graphicspath{ {Pics/} }
 \title{Beschreibung des Prototypen-Content}
 \author{apoehlmann}
 \date{7.11.2015}
@@ -19,9 +10,6 @@
   /Keywords (SECH EEXCESS Content Prototyp)
 }
 
-\begin{document}
-\maketitle
-\tableofcontents
 \pagebreak
 
 \section{Beschreibung}
@@ -51,7 +39,7 @@ und somit auch das \href{https://github.com/EEXCESS/eexcess/wiki/%5B21.09.2015%5
       \item Der ConnectionManager verschickt die Daten an den Server
     \end{enumerate}
   \item Die Antwort vom Server wird im \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ViewController.swift}{ViewController:53} entgegen genommen und dargestellt
-  \item Speichert JSON in das Dictionary "mapOfJSONs" in der Klasse "MainController"
+  \item Speichert JSON in das Dictionary "mapOfJSONs" in der Klasse ''MainController''
   \item Fügt die DocumentBages in die die ComboBox für die DetailAnfrage
 \end{enumerate}
 \pagebreak
@@ -94,18 +82,17 @@ Die Klasse JSONObject kann ohne großen Aufwand um weitere Methoden ergänzt wer
 
 \section{Netzwerkverbindungen}
 
-Die Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{ConnectionManager} ist für das Erstellen einer Verbindung zum Server zuständig. Sie besitzt eine öffentliche Methode "makeHTTP\_Request".
+Die Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{ConnectionManager} ist für das Erstellen einer Verbindung zum Server zuständig. Sie besitzt eine öffentliche Methode ''makeHTTP\_Request''.
  Zusätzlich gibt es eine Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{PROJECT\_URL} für die URLs, welche im Projekt benötigt werden.
 
 \section{UI}
 \includegraphics[scale=0.35]{ContentPrototyp2.png}
 \begin{enumerate}
-\item Eingabe der Suchbegriffe. Mit "," werden die Begriffe getrennt und mit "|" werden die Suchbegriffgruppen getrennt
-\item Hier können den Suchbegriffen noch Eigenschaften hinzugefügt werden. Nach jeder Änderung muss der "change keyContext"-Button gedrückt werden. Mit dem Button "send Request" wird die Anfrage verschickt. Der Button "reset" besitzt keine Funktion.
+\item Eingabe der Suchbegriffe. Mit '','' werden die Begriffe getrennt und mit ''|'' werden die Suchbegriffgruppen getrennt
+\item Hier können den Suchbegriffen noch Eigenschaften hinzugefügt werden. Nach jeder Änderung muss der "change keyContext"-Button gedrückt werden. Mit dem Button ''send Request'' wird die Anfrage verschickt. Der Button ''reset'' besitzt keine Funktion.
 \item In diesem Bereich können zusätzliche Informationen für die Anfrage angegeben werden.
 \item Anzeige der Antwort vom Server
-\item Auswahlmöglichkeiten für die Detailanfrage und der "Search Details"-Button
+\item Auswahlmöglichkeiten für die Detailanfrage und der ''Search Details''-Button
 \item Anzeige der DetailAntwort vom Server
 \end{enumerate}
 
-\end{document}

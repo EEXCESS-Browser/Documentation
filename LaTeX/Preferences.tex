@@ -1,7 +1,4 @@
-\documentclass[a4paper,10pt]{scrreprt}
-\usepackage[utf8]{inputenc}
 
-\begin{document}
 \chapter{Einstellungsmöglichkeiten}
 
 Der Nutzer hat die Möglichkeit bestimmte Einstellungen vorzunehmen, welche die Ergebnisse der Suchanfragen beeinflussen.   
@@ -18,9 +15,9 @@ Folgende Einstellungen können getätigt werden:
 
 
 Nachdem der Nutzer alle Einstellungen getätigt hat, werden die entsprechenden Attribute in
-ein Dictionary der Form [String:String] hinzugefügt und die Methode "createJSONForRequest
+ein Dictionary der Form [String:String] hinzugefügt und die Methode ''createJSONForRequest
 (keyWordsWithKeys:[String:AnyObject],
-detail:Bool, pref:[String:String]) -\textgreater JSONObject?" der Klasse "MainController" wird aufgerufen. Diese Methode berechnet zu erst mit Hilfe der Methode "calculateAgeRange(ageInYears:Int) -\textgreater Int" die sog. "Age-Range". Die "Age-Range" ist eine als String gespeicherte Zahl und gibt an ob es sich beim Nutzer um ein Kind, jungen Erwachsenen oder Erwachsenen handelt. Welche "Age-Range" jedem Alter zugeordnet ist, kann folgender Tabelle entnommen werden:
+detail:Bool, pref:[String:String]) -\textgreater JSONObject?'' der Klasse ''MainController'' wird aufgerufen. Diese Methode berechnet zu erst mit Hilfe der Methode ''calculateAgeRange(ageInYears:Int) -\textgreater Int'' die sog. ''Age-Range''. Die ''Age-Range'' ist eine als String gespeicherte Zahl und gibt an ob es sich beim Nutzer um ein Kind, jungen Erwachsenen oder Erwachsenen handelt. Welche ''Age-Range'' jedem Alter zugeordnet ist, kann folgender Tabelle entnommen werden:
 
 \begin{tabular}{c|c|c}
 Alter & Bezeichnung & Age-Range \\
@@ -32,5 +29,3 @@ ab 26 & Erwachsener & 2
 
 Danach wird das entsprechende JSON-Objekt mit den dazugehörigen Attributen erzeugt.
 
-
-\end{document}

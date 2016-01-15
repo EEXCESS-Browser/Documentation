@@ -1,10 +1,8 @@
-\begin{document}
-
 \section{Addressbar}
 \subsection{Funktionen}
 Die Addressbar prüft die Eingaben des Nutzers und schickt diese weiter an die WebView um die Seite anzeigen zu lassen.
 Bei Eingabe einer URL wird diese geprüft und an die WebView weitergeschickt um die Webseite anzuzeigen.
-Dabei wird die URL nur auf Vollständigkeit geprüft. Falls es dabei zu Fehlern kommt (fehlen von "http://www", "http://" oder "www")
+Dabei wird die URL nur auf Vollständigkeit geprüft. Falls es dabei zu Fehlern kommt (fehlen von ''http://www'', ''http://'' oder ''www'')
 wird die URL ergänzt und erst dann weitergeliefert.
 Wenn es sich bei der Eingabe um keine URL handelt, wird die Eingabe an Google weitergeleitet und die Ergebnisse angezeigt.
 
@@ -24,13 +22,13 @@ Aufgeteilt in einzelne Funktinen, welche mit Hilfe von Regulären Ausdrücken di
 Falls es Elemtent fehlt wird dieses hinzugefügt. Wenn es sich um keine URL handelt, wird eine URL für die Googlesuche erstellt.
 \\\\
 validateHTTPWWW():\\
-Prüfen nach fehlendem "http://www".
+Prüfen nach fehlendem ''http://www''.
 \\
 validateHTTP():\\
-Prüfen nach fehlendem "http://".
+Prüfen nach fehlendem ''http://''.
 \\
 validateWWW():\\
-Prüfen nach fehlendem "www".
+Prüfen nach fehlendem ''www''.
 \\\\
 loadRequest:\\
 Weitergabe der geprüften und verbesserten URL an die WebView.
@@ -40,7 +38,3 @@ Weitergabe der geprüften und verbesserten URL an die WebView.
 	\caption{Sequenzdiagramm Adressbar}
 	\label{fig:bild}
 \end{figure}
-
-
-
-\end{document}

@@ -5,82 +5,82 @@ Das Web besteht aus einer Vielzahl von Seiten mit unterschiedlichsten
 Informationen. Betrachtet man diese Seiten genauer so stellt man fest,
 dass ihr informationstragender Inhalt praktisch immer statisch ist.
 Er wird zum Zeitpunkt der Erstellung der Web--Seite von einem Autor
-festgelegt und bleibt bis zum nächsten Update in genau diesem
-Zustand. Auch wenn die Seiten dynamisch generiert werden, der dafür
+festgelegt und bleibt bis zum nÃ¤chsten Update in genau diesem
+Zustand. Auch wenn die Seiten dynamisch generiert werden, der dafÃ¼r
 verwendete Inhalt ist vorher von einem Autor erstellt worden. Dass
-diese Informationen statisch sind bedeutet auch, dass die Seiten für
+diese Informationen statisch sind bedeutet auch, dass die Seiten fÃ¼r
 alle Betrachter weltweit identisch sind.
 
-Ziel des \SECH--Browsers ist es, diese statische Präsentation der
+Ziel des \SECH--Browsers ist es, diese statische PrÃ¤sentation der
 Informationen aufzuheben und die von einem Autor vorgegebenen Inhalte
 automatisch um benutzerspezifische Informationen, den
-\emph{\SECH--Annotations}\footnote{\SECH steht dabei für \textbf{S}elf
+\emph{\SECH--Annotations}\footnote{\SECH steht dabei fÃ¼r \textbf{S}elf
   \textbf{E}mbeding \textbf{C}haracteristic \textbf{H}yperlinks.}, zu
-ergänzen. Er folgt damit der Idee des \glqq taking the content to the
+ergÃ¤nzen. Er folgt damit der Idee des \glqq taking the content to the
 user\grqq\footnote{http://eexcess.eu} des EEXCESS--Projektes.
 
-Die Auswahl der zusätzlichen Informationen wird dabei von dem
+Die Auswahl der zusÃ¤tzlichen Informationen wird dabei von dem
 \SECH--Browser, also dem Client, und nicht dem Server
 vorgenommen. Personenbezogene Daten verlassen also nur dann den
-eigenen Rechner, wenn es für die Suche nach den Daten der
+eigenen Rechner, wenn es fÃ¼r die Suche nach den Daten der
 \SECH--Annotations notwendig ist. Somit ist ein Maximum an
 Datenschutz gegeben.
 
 In der ersten Version basiert die Erzeugung der \SECH--Annotations
 durch den \SECH--Browser auf Informationen, die der Seitenautor in
 einem speziellen Format im Text hinterlegt hat. Diese Informationen,
-die \SEACH--Tags\footnote{\SEACH steht dabei für \textbf{S}elf
+die \SEACH--Tags\footnote{\SEACH steht dabei fÃ¼r \textbf{S}elf
   \textbf{E}mbeding \textbf{A}nnotation based \textbf{C}haracteristic \textbf{H}yperlinks.}, verwendet der \SECH--Browser dann dazu, benutzerspezifische
 Anfragen an eine Wissensquelle, beispielsweise dem Privacy--Proxy des
 EEXCESS--Projektes (\url{http://eexcess.eu}), zu stellen und mit den
-Ergebnissen die ursprüngliche Darstellung der WWW--Seite zu
-ergänzen. 
+Ergebnissen die ursprÃ¼ngliche Darstellung der WWW--Seite zu
+ergÃ¤nzen. 
 
 In den weiteren Entwicklungsschritten soll der \SECH--Browser dann die
-für die Erzeugung der \SECH--Annotations notwendigen Informationen
-selbständig aus den Textinhalten ableiten. Dafür können dann
+fÃ¼r die Erzeugung der \SECH--Annotations notwendigen Informationen
+selbstÃ¤ndig aus den Textinhalten ableiten. DafÃ¼r kÃ¶nnen dann
 beispielsweise Techniken aus den Bereichen des Text-- beziehungsweise
 Opinion--Minings verwendet werden.
 
 \subsection{Anwendungsszenarien}
 Im folgenden soll an Hand von einigen Beispielen dargestellt werden,
-wie die zusätzlichen Funktionalitäten des \SECH--Browsers den Anwender
-unterstützen können.
+wie die zusÃ¤tzlichen FunktionalitÃ¤ten des \SECH--Browsers den Anwender
+unterstÃ¼tzen kÃ¶nnen.
 
 \subsubsection{Fremdenverkehr}
-Web--Seiten von Fremdenverkehrsverbänden werden von einer 
+Web--Seiten von FremdenverkehrsverbÃ¤nden werden von einer 
 Vielzahl von verschiedenen Benutzergruppen besucht:
 \begin{itemize}
-     \item Besucher, die im näheren Umkreis leben.
+     \item Besucher, die im nÃ¤heren Umkreis leben.
      \item Besucher von weiter her.
      \item Besuchern mit unterschiedlichen Muttersprachen.
      \item Besucher verschiedener Altergruppen.
      \item ...
 \end{itemize}
 Die verschiedenen Benutzergruppen haben in der Regel auch verschiedene
-Anforderungen an die zur Verfügung gestellten Informationen:
+Anforderungen an die zur VerfÃ¼gung gestellten Informationen:
 \begin{itemize}
-     \item Ein Besucher, der nicht im näheren Umkreis lebt, benötigt
-    in der Regel eher Informationen über die Hotels des Gebietes als ein
+     \item Ein Besucher, der nicht im nÃ¤heren Umkreis lebt, benÃ¶tigt
+    in der Regel eher Informationen Ã¼ber die Hotels des Gebietes als ein
     Besucher aus dem Umkreis.
-     \item Während Jugendliche sich eher für die Angebote aus dem Bereich
-    der Fun--Sport--Arten interessieren, könnten Senioren eher an
-    Informationen über die kulturellen Angebote der Region
+     \item WÃ¤hrend Jugendliche sich eher fÃ¼r die Angebote aus dem Bereich
+    der Fun--Sport--Arten interessieren, kÃ¶nnten Senioren eher an
+    Informationen Ã¼ber die kulturellen Angebote der Region
     interessiert sein.
      \item Fremdsprachige Benutzer sollten vorrangig Informationen in
-    ihrer Landessprache präsentiert werden.
+    ihrer Landessprache prÃ¤sentiert werden.
 \end{itemize}
 
-Liegt ein gutes Design der Web--Seite vor, können die Besucher weitere Teile
-der für sie relevanten Daten durch entsprechende Verlinkungen auf
-andere Web--Seiten finden. Aber auch diese zusätzlichen Informationen
-sind statisch, für alle Besucher der Seite identisch und somit nicht
-an die Bedürfnisse der einzelnen Besucher angepasst.
+Liegt ein gutes Design der Web--Seite vor, kÃ¶nnen die Besucher weitere Teile
+der fÃ¼r sie relevanten Daten durch entsprechende Verlinkungen auf
+andere Web--Seiten finden. Aber auch diese zusÃ¤tzlichen Informationen
+sind statisch, fÃ¼r alle Besucher der Seite identisch und somit nicht
+an die BedÃ¼rfnisse der einzelnen Besucher angepasst.
 
-Auch in diesem Anwendungsfall wäre es viel sinnvoller, wenn der
+Auch in diesem Anwendungsfall wÃ¤re es viel sinnvoller, wenn der
 \SECH--Browser an Hand der ihm bekannten benutzerspezifischen
-Informationen selbständig erkennt, welche zusätzlichen Informationen
-für den Besucher interessant sein könnten und diese dann entsprechend
+Informationen selbstÃ¤ndig erkennt, welche zusÃ¤tzlichen Informationen
+fÃ¼r den Besucher interessant sein kÃ¶nnten und diese dann entsprechend
 aufbereitet darstellen.
 
 \subsubsection{Noch einer}
@@ -98,19 +98,19 @@ Die im Wintersemester 2015/16 zu entwickelnde Version des
     zur Beschreibung der vom Autor vorgegebenen Informationen zur
     Erstellung einer \SECH--Annotation.
      \item Erzeugung der um benutzerorientierte Informationen
-    angereicherten Anfragen für den Privacy--Proxy.
-     \item Integration der einzelnen Teilsysteme in einen lauffähigen
+    angereicherten Anfragen fÃ¼r den Privacy--Proxy.
+     \item Integration der einzelnen Teilsysteme in einen lauffÃ¤higen
     Prototypen. 
 \end{enumerate}
-Für die Software--Bausteine sind entsprechende Spezifikations--,
+FÃ¼r die Software--Bausteine sind entsprechende Spezifikations--,
 Konstruktions-- und Testdokumente zu erstellen. Diese Dokumente
 orientieren sich an den Inhalten der Vorlesung \glqq Software
 Engineering II\grqq.
  
 Erweiterungen, wie beispielsweise
 \begin{enumerate}
-     \item Rating des Benutzers über die Güte der \SECH--Annotations einholen;
-     \item Verwendung des Ratings um darauf folgende, ähnliche
+     \item Rating des Benutzers Ã¼ber die GÃ¼te der \SECH--Annotations einholen;
+     \item Verwendung des Ratings um darauf folgende, Ã¤hnliche
     \SECH--Annotations zu verbessern;
 \end{enumerate}
-können in das Projekt einfließen.
+kÃ¶nnen in das Projekt einflieÃŸen.

@@ -10,7 +10,7 @@
 \usepackage{spreadtab}
 \usepackage{xspace}
 \usepackage{ngerman}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 %\usepackage[T1]{fontenc}
 \usepackage[pdftex]{graphicx}
 \usepackage[bookmarks]{hyperref}
@@ -23,6 +23,12 @@
 \usepackage{colortbl}
 \usepackage{relsize}
 \usepackage{fancyvrb}
+
+\usepackage{geometry}
+\usepackage{multicol}
+\usepackage{multido}
+\usepackage{hyperref}
+\usepackage{listings}
 
 \graphicspath{{./}{./Pics/}}
 
@@ -60,7 +66,7 @@
 Spezifikation, Konstruktion
 }
 
-\author{Prof. Dr. Peter Stöhr \and Gottfried von Recum \and Alexander Pöhlmann \and Tim Pohrer \and Lothar Mödl \and Burak Erol \and Brian Mairhörmann \and Andreas Netsch \and Philipp Winterholler \and Patrick Büttner \and Andreas Ziemer}
+\author{Prof. Dr. Peter StÃ¶hr \and Gottfried von Recum \and Alexander PÃ¶hlmann \and Tim Pohrer \and Lothar MÃ¶dl \and Burak Erol \and Brian MairhÃ¶rmann \and Andreas Netsch \and Philipp Winterholler \and Patrick BÃ¼ttner \and Andreas Ziemer}
 \date{Version 0.1.1}
 
 % #################################################################
@@ -68,7 +74,7 @@ Spezifikation, Konstruktion
 
 \begin{document}
 \maketitle
-\pagenumbering{roman}
+\pagenumbering{Roman}
 \tableofcontents
 
 \listoftables
@@ -81,7 +87,23 @@ Spezifikation, Konstruktion
 \include{mission}
 \include{eexcess}
 \part*{Spezifikation}
-\include{funktion-browser}
+
 \part*{Konstruktion}
+
+\part*{zu verteilen}
+\include{funktion-browser}
 \include{sechobject}
+\include{addressbar}
+\include{Animation_der_TableView}
+\include{Constraints_setzen}
+\include{ContentPrototyp}
+\include{Entwicklung_des_Layouts_des_Browsers}
+\include{Konstruktion_Team_Content}
+\include{lesezeichen}
+\include{Licenses}
+\include{Preferences}
+\include{Ranking}
+\include{Recherche_Partner_Provider}
+\include{testfaelle}
+\include{WkWebKit}
 \end{document}
