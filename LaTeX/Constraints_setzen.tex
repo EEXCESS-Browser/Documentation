@@ -8,14 +8,14 @@
 Damit die Bedienelemente und das UI vom Browser auf verschiedenen Endgeräten identisch dargestellt wird, müssen Constraints gesetzt werden. Somit wird eine dynamische und bei bestimmten Bedienelementen eine feste Position gesetzt bzw. angepasst. Komplikationen mit den schon vorhandenen Constraints vom Container im Hintergrund waren vorhanden, somit mussten alle Constraints gelöscht und neu erzeugt werden. Nachdem das WKWebView dennoch keine Höhe und Breite vom darunter liegenden Container angenommen hatte (Vermutung: Im main.storyboard nicht verwendete Constraints, die das Layout ungewollt ändern), musste der Navigation Controller gelöscht und erneut integriert werden. Hierzu wurden folgende Schritte beachtet:
 
 - Referenzen der Bedienelemente im main.storyboard und im ViewController löschen 
-- Menüleiste samt Buttons im main.storyboard löschen 
+- Menüleiste samt Buttons im main.storyboard löschen 
 - Tabelle/Zellen löschen
 - Container im Hintergrund löschen
 - Navigation Controller ausklinken und entfernen
 
 Navigation Controller neu erstellen:
-- Menüleiste samt Buttons einfügen und feste Constraints setzen
-- Container einfügen und feste Constraints setzen
+- Menüleiste samt Buttons einfügen und feste Constraints setzen
+- Container einfügen und feste Constraints setzen
 - Tabelle/Zellen einfügen und feste Constraints setzen
 - Referenzen neu verlinken und alles wieder in den ViewController integrieren
 
