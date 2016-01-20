@@ -9,21 +9,21 @@
 
 Das Layout des Browsers besteht aus folgenden Elementen:
 
-- Navigation Controller
-- Navigation Bar
-	- Back/Forward Button
-	- Lesezeichen Button
-	- Lesezeichen hinzufügen Button
-	- Home Button
-	- AddressBar
-	- Reload Buttons
-	- Sech Button
-	- Optionen Button
-	- Container
-	- WKWebView
-
-Die oben aufgelisteten Elemente stellen das komplette Layout des Browser dar. Der Navigation Controller dient in diesem dazu, dem Browser einen automatisch generierten Navigation Bar hinzuzufügen, welche im oberen Bildschirm fest verankert ist und eine nicht veränderbare Höhe und Breite liefert. Diese Navigation Bar besitzt einen Back Button, um auf einer Seite zurück zu springen und einen Forward Button, um eine Seite vor zu blättern. Bedient man den Lesezeichen Button so öffnet sich eine TableView mit aller gespeicherten Seiten chronologisch absteigend in der er eine Seite auswählen, löschen oder editieren kann. Will der Nutzer die Liste um ein weiteres Element ergänzen, so muss er den Plus Button bedienen und es öffnet sich ein Pop Up Fenster, der den Link der aktuell besuchten Seite automatisch übernimmt und der Nutzer diesem lediglich nur noch einen Titel vergeben und abspeichern muss. Mit dem Home Button gelangt der Nutzer zu seiner definierten Startseite. Die AddressBar dient für die Eingabe eines Weblinks der durch bestätigen zu der eingegeben Seite gelangt. Um die aktuelle Seite neu zu laden, muss der Reload Button bedient werden. Will der Benutzer alle Sech Tags auf der aktuellen Seite anzeigen, so bedient er den Sech Button. Ist der Sech Button angeklickt worden, so klappt sich von der rechten Bildschirmseite eine TableView mit allen Sech Tags auf und bietet dem Nutzer eine Übersicht dieser. Wird eines der Sech Tags in dieser TableView angeklickt, so öffnet sich ebenfalls ein PopUp Fenster zu diesem Tag, der weitere Informationen zurückliefert. Um die Sech Tag Tabelle wieder einzuklappen wird ein weiteres Klicken auf den Sech Button benötigt und diese führt sich ein. Durch einen Klick auf den Optionen Button öffnet sich auch hier ein Pop Up Fenster, der benutzerspezifische Informationen mitliefert und übersichtlich darstellt. Um den WKWebView eine dynamische Höhe und Breite programmatisch zu übergeben, wurde ein Container, eine Schicht unter diesem, mit festen Constraints übergeben. Diese Constraints passen sich zu den benachbarten Elementen, wie der ausgefahrenen Sech Tabelle oder der Navigation Bar, an und das WKWebView übernimmt die Constraints dieses darunter liegenden Containers. Dreht man das Endgerät beispielsweise von Hochformat in den Querformat, ändern sich Höhe und Breite des Containers und diese werden vom WKWebView übernommen.
+\begin{itemize}
+\item Navigation Controller
+\item Navigation Bar
+\item Back/Forward Button
+\item Lesezeichen Button
+\item Lesezeichen hinzufügen Button
+\item Home Button
+\item AddressBar
+\item Reload Buttons
+\item Sech Button
+\item Optionen Button
+\item Container
+\item WKWebView
+\end{itemize}
+	
+Die oben aufgelisteten Elemente stellen das komplette Layout des Browser dar. Der Navigation Controller dient in diesem dazu, dem Browser einen automatisch generierten Navigation Bar hinzuzufügen, welche im oberen Bildschirm fest verankert ist und eine nicht veränderbare Höhe und Breite liefert. Diese Navigation Bar besitzt einen Back Button, um auf einer Seite zurück zu springen und einen Forward Button, um eine Seite vor zu blättern. Bedient man den Lesezeichen Button so öffnet sich eine TableView mit aller gespeicherten Seiten chronologisch absteigend in der er eine Seite auswählen, löschen oder editieren kann. Will der Nutzer die Liste um ein weiteres Element ergänzen, so muss er den Plus Button bedienen und es öffnet sich ein Pop Up Fenster, der den Link der aktuell besuchten Seite automatisch übernimmt und der Nutzer diesem lediglich nur noch einen Titel vergeben und abspeichern muss. Mit dem Home Button gelangt der Nutzer zu seiner definierten Startseite. Die AddressBar dient für die Eingabe eines Weblinks der durch bestätigen zu der eingegeben Seite gelangt. Um die aktuelle Seite neu zu laden, muss der Reload Button bedient werden. Will der Benutzer alle Sech Tags auf der aktuellen Seite anzeigen, so bedient er den Sech Button. Ist der Sech Button angeklickt worden, so klappt sich von der rechten Bildschirmseite eine TableView mit allen Sech Tags auf und bietet dem Nutzer eine Übersicht dieser. Wird eines der Sech Tags in dieser TableView angeklickt, so öffnet sich ebenfalls ein PopUp Fenster zu diesem Tag, der weitere Informationen zurückliefert. Um die Sech Tag Tabelle wieder einzuklappen wird ein weiteres Klicken auf den Sech Button benötigt und diese führt sich ein. Durch einen Klick auf den Optionen Button öffnet sich auch hier ein Pop Up Fenster, der benutzerspezifische Informationen mitliefert und übersichtlich darstellt. Um den WKWebView eine dynamische Höhe und Breite programmatisch zu übergeben, wurde ein Container, eine Schicht unter diesem, mit festen Constraints übergeben. Diese Constraints passen sich zu den benachbarten Elementen, wie der ausgefahrenen Sech Tabelle oder der Navigation Bar, an und das WKWebView übernimmt die Constraints dieses darunter liegenden Containers. Dreht man das Endgerät beispielsweise von Hochformat in den Querformat, ändern sich Höhe und Breite des Containers und diese werden vom WKWebView übernommen.
 
 \includegraphics[width=12cm]{Pics/Browser_Hochformat}
-
-
