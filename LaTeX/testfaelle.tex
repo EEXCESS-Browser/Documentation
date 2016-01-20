@@ -93,6 +93,8 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
      \end{enumerate}
   \end{enumerate} % search-head
 
+
+
 \pagebreak
 
 % ---------- search-section --------------------
@@ -202,7 +204,6 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 	 \item Topic, Type, mediaType, Provider
 \end{enumerate}
 \end{enumerate}
-
 
 \pagebreak
 
@@ -331,3 +332,14 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 \item search-link nicht geschlossen
 \end{enumerate}
 
+\section{Auswertung der Testfälle}
+
+Sobald nur ein search-head vorhanden ist, wird dieser nicht ausgewertet und es werden keine search-links angezeigt.
+
+Sobald nur eine oder mehrere search-sections vorhanden sind, werden diese nicht ausgewertet und es werden keine search-links angezeigt.
+
+Sobald search-links vorhanden sind, werden diese entsprechend ausgewertet und sie werden korrekt in der TableView der Search-Tags angezeigt.
+
+Es treten Fehler auf, sobald im search-link die Anführungszeichen fehlen, denn es werden trotzdem entsprechende search-links gefunden und fehlerhaft angezeigt.
+
+Sobald Tag-Klammern fehlen, können diese nicht ausgewertet werden und werden nicht angezeigt.
