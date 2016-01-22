@@ -19,7 +19,7 @@ ein Dictionary der Form [String:String] hinzugefügt und die Methode ''createJSO
 (keyWordsWithKeys:[String:AnyObject],
 detail:Bool, pref:[String:String]) -\textgreater JSONObject?'' der Klasse ''MainController'' wird aufgerufen. Diese Methode berechnet zu erst mit Hilfe der Methode ''calculateAgeRange(ageInYears:Int) -\textgreater Int'' die sog. ''Age-Range''. Die ''Age-Range'' ist eine als String gespeicherte Zahl und gibt an ob es sich beim Nutzer um ein Kind, jungen Erwachsenen oder Erwachsenen handelt. Welche ''Age-Range'' jedem Alter zugeordnet ist, kann folgender Tabelle entnommen werden:
 
-\begin{table}
+\begin{table}[h]
 	\centering
 	\begin{tabular}{c|c|c}
 		Alter & Bezeichnung & Age-Range \\
@@ -31,6 +31,6 @@ detail:Bool, pref:[String:String]) -\textgreater JSONObject?'' der Klasse ''Main
 	\caption{mögliche Altersbereiche}
 	\label{tab:Altersbereiche}
 \end{table}
-\pagebreak
+
 Danach wird das entsprechende JSON-Objekt mit den dazugehörigen Attributen erzeugt.
 
