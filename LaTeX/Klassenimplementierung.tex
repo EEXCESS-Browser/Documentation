@@ -1,14 +1,20 @@
-\section{Klassen Implementierung}
-Es entsteht ein Objekt der Klasse \Verb|search|:
+\author{Gottfried von Recum}
+
+\chapter{Klassen Implementierung}
+
+Es entsteht ein Objekt der Klasse \Verb|SEACHModel|:
 
 \begin{lstlisting}
-class Search{
+class SEACHModel {
+    static let LINK_TAG = "LINK"
+    static let SECTION_TAG = "SECTION"
+    static let HEAD_TAG = "HEAD"
+    
     var id = String()
-    var response = String() //Tbd
-    var detail = String() //Tbd
     var tags = [String : Tag]()
     // String is id (link, section, head) and Tag is Tag-Object
     var filters = Filter()
+
 }
 
 class Tag {
@@ -17,9 +23,8 @@ class Tag {
     var isMainTopic = false
 }
 
-class Filter{
+class Filter {
     var mediaType = String()
     var provider = String()
     var licence = String()
-}
-\end{lstlisting}
+}\end{lstlisting}

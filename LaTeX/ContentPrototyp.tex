@@ -10,11 +10,6 @@
   /Keywords (SECH EEXCESS Content Prototyp)
 }
 
-\section{Netzwerkverbindungen}
-
-Die Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{ConnectionManager} ist für das Erstellen einer Verbindung zum Server zuständig. Sie besitzt eine öffentliche Methode ''makeHTTP\_Request''.
- Zusätzlich gibt es eine Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{PROJECT\_URL} für die URLs, welche im Projekt benötigt werden.
-
 \chapter{Server Anfragen}
 
 \section{Beschreibung}
@@ -22,6 +17,21 @@ Der Content-Prototyp ermöglicht es, Anfragen an den Server des
 \href{https://github.com/EEXCESS/eexcess/wiki}{EEXCESS-Projektes} zu schicken.
 Der Prototyp unterstützt das \href{https://github.com/EEXCESS/eexcess/wiki/%5B21.09.2015%5D-Request-and-Response-format#pp-query-format}{PP-QF2}
 und somit auch das \href{https://github.com/EEXCESS/eexcess/wiki/%5B21.09.2015%5D-Request-and-Response-format#pp-response-format}{PP-RF2}.
+
+\section{Aufbau des Prototypen}
+
+Der zunächst erstellte Prototyp ist grob wie folgt aufgebaut:
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{KlassendiagrammContentPrototyp.png}
+	\caption{Aufbau des Prototypen}
+	\label{fig:Prototypaufbau}
+\end{figure}
+
+\section{Netzwerkverbindungen}
+
+Die Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{ConnectionManager} ist für das Erstellen einer Verbindung zum Server zuständig. Sie besitzt eine öffentliche Methode ''makeHTTP\_Request''.
+ Zusätzlich gibt es eine Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{PROJECT\_URL} für die URLs, welche im Projekt benötigt werden.
 
 \section{Verarbeiten/Aufbauen der Anfragen}
 \subsection{Anfrage}

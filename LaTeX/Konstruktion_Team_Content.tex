@@ -3,7 +3,8 @@
 \title{Konstruktion Ranking}
 \author{Lothar Mödl}
 
-\section{Ranking Sequenzdiagramm}
+\chapter{Ranking}
+\section{Sequenzdiagramm}
 
 \begin{figure}[h]
 	\centering
@@ -14,7 +15,7 @@
 
 Dieses Sequenzdiagramm zeigt einen exemplarischen Durchlauf des Rankings der Vorschläge für den Benutzer. Nachdem die Daten aus dem Internet abgerufen wurden und an den ViewController (Team UI) übergeben wurden folgt die Sortierung der Ergebnisse nach den Interessen des Nutzers. Es existieren eine Reihe an verschiedenen Regeln, die angewendet werden können. Die Anzahl an Regeln kann variieren. Welche Regeln angewendet werden, wird vom ViewController festgelegt mit Hilfe der Methode „useRule(rule:Rule)“. Nachdem die Regeln, die angewendet werden sollen, festgelegt wurden, müssen diese angewendet werden. Dies geschieht mit der Methode „applyRulesToAllResponses(responses:[EEXCESSAlllResponses])“. Als Argument müssen alle zuvor erhaltenen Ergebnisse mit übergeben werden. Die Klasse Rules übernimmt im Anschluss die Berechnungen, die für das Ranking der Ergebnisse notwendig sind. Die Methode „calculateValue(responses)“ berechnet in Verbindung mit der Methode „calculateRule(response): Double“ einen Durchschnittswert für jede einzelne Antwort für jeden einzelnen \SEARCH-Tag, nachdem jede Regel angewendet wurde. Eine Regeln wird durch den Aufruf der Methode „applyRule(responseValue): RuleMatch“ angewandt, welche jede Regel besitzt und liefert den Wert 0 oder 1 zurück. Dieser bedeutet, ob die Regel auf die Interessen des Nutzers zutrifft oder nicht. Zum Abschluss des Rankings werden die einzelnen Ergebnisse entsprechend nach dem zuvor errechneten Durchschnittswert sortiert. Im Anschluss erhält das Team UI die sortierten Werte zurück und kann sie dem Nutzer darstellen. 
 
-\section{Ranking Klassendiagramm}
+\section{Klassendiagramm}
 
 \begin{figure}[h]
 	\centering
