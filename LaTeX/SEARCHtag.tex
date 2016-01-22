@@ -1,0 +1,124 @@
+\author{Gottfried von Recum}
+\chapter{\SEARCH-Tag}
+
+\section{Allgemeines}
+Ein \SEARCH-Tag gibt dem Ersteller einer HTML5 Seite die Möglichkeit seinen Content dynamisch anzureichern. Dazu kann er einige Attribute definieren.
+Ein \SEARCH-Tag besteht aus bis zu drei Teilen, die an verschiedenen Stellen in den HTML5 Quellcode der Seite eingefügt werden können.
+Die generelle Form ist
+\begin{lstlisting}
+	<search attribute="">...</search>
+\end{lstlisting}
+
+Die drei Teile sind angelehnt an HTML5:
+\begin{lstlisting}
+	<search-head>
+	<search-section>
+	<search-link>
+\end{lstlisting}
+
+Jeder Teil eines \SEARCH-Tags hat stets das Attribut \Verb|topic="text"| wobei \Verb|text| ein frei wählbarer Begriff ist, der zur Contentgenerierung verwendet werden soll.
+
+Die vier optionalen Filter Attribute \Verb|type=""|, \Verb|mediaType=""|, \Verb|provider=""| und \Verb|licence=""| dienen der Optimierung der Suchanfrage und anschließenden Antwortauswahl.
+
+\section{\SEARCH-Head}
+[optional]
+Der \Verb|<search-head>| Teil wird \textbf{optional} in den Header der Seite eingefügt um allgemeine Attribute für die Seite als Ganzes definieren zu können.
+
+\begin{lstlisting}
+<head>
+    <search-head topic="text">
+</head>
+\end{lstlisting}
+
+oder
+
+\begin{lstlisting}
+<head>
+    <search-head topic="Programmierer" type="misc" mediaType="unknown"
+    provider="ZBW" licence="unknown">
+</head>
+\end{lstlisting}
+
+\section{\SEARCH-Link}
+[obligtorisch]
+Der \textbf{obligatorische} \Verb|<search-link>| Teil eines \SEARCH-Tags umschließt einen Bereich, der mit Inhalt angereichert werden soll. Dieser kann hervorgehoben dargestellt werden.
+
+\begin{lstlisting}
+<body>
+    <search-link topic="text">...</search-link>
+</body>
+\end{lstlisting}
+
+oder
+
+\begin{lstlisting}
+<body>
+    <search-link topic="Ada" type="person" mediaType="image"
+    provider="ZBW" licence="unknown">Ada Lovelace</search-link>
+</body>
+\end{lstlisting}
+
+\section{\SEARCH-Section}
+[optional]
+Der \Verb|<search-section>| Teil wir \textbf{optional} im Body des HTML5 Quellcodes platziert und umschließt einen oder mehrere \Verb|<search-link>| Teile. Damit kann dem \SEARCH-Link Teil ein erweiterter Themenbezug beiseite gestellt werden.
+
+\begin{lstlisting}
+<body>
+    <search-section topic="text">
+    ...
+    </search-section>
+</body>
+\end{lstlisting}
+
+oder
+
+\begin{lstlisting}
+<html>
+<head>
+    <search-meta topic="Programmierer" type="misc" mediaType="unknown"
+    provider="ZBW" licence="unknown">
+</head>
+<body>
+    ...
+    <search-section topic="Grossbritannien" type="location"
+    mediaType="unknown" provider="ZBW" licence="unknown">
+    ...
+    <search-link topic="Ada" type="person" mediaType="image"
+    provider="ZBW" licence="unknown">Ada Lovelace</search-link>
+    ...
+    </search-section>
+</body>
+</html>
+\end{lstlisting}
+
+\section{\SEARCH-Tag}
+Der \SEARCH-Tag schließlich besteht aus allen drei Teilen (soweit vorhanden), dabei wird der \SEARCH-Link Teil am stärksten gewichtet.
+
+Dabei akkumulieren die \Verb|topics| und \Verb|types|.
+Die \Verb|mediaTypes|, \Verb|provider| und \Verb|licences| hingegen ersetzen sich mit zunehmender Priorität in Richtung \SEARCH-Link.
+
+\section{Klassen Implementierung}
+Es entsteht ein Objekt der Klasse \Verb|search|:
+
+\begin{lstlisting}
+class Search{
+    var id = String()
+    var response = String() //Tbd
+    var detail = String() //Tbd
+    var tags = [String : Tag]()
+    // String is id (link, section, head) and Tag is Tag-Object
+    var filters = Filter()
+}
+
+class Tag {
+    var topic = String()
+    var type = String()
+    var isMainTopic = false
+}
+
+class Filter{
+    var mediaType = String()
+    var provider = String()
+    var licence = String()
+}
+\end{lstlisting}

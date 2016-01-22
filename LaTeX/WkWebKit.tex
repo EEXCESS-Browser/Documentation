@@ -5,9 +5,9 @@
 
 
 
-\section{ WkWebKit JavaScript}
+\chapter{ WkWebKit JavaScript}
 
-WkWebKit ersetzt den ursprünglichen UIWebView und wurde in unserer App nachträglich hinzugefügt, da war anfangs einen UIWebView verwendet haben. Dieser bietet aber weniger funktionen und wird somit von Apple nicht mehr empfohlen. Die Einbindung des WkWebView ist zum derzeitigen Stand jedoch noch nicht über den Interface Builder möglich und muss somit programatisch erstellt werden.
+WkWebKit ersetzt den ursprünglichen UIWebView und wurde in unserer App nachträglich hinzugefügt, da war anfangs einen UIWebView verwendet haben. Dieser bietet aber weniger Funktionen und wird somit von Apple nicht mehr empfohlen. Die Einbindung des WkWebView ist zum derzeitigen Stand jedoch noch nicht über den Interface Builder möglich und muss somit programatisch erstellt werden.
 Erzeugen der verwendeten Variable myWebView als WKWebView:
 \begin{verbatim}
 var myWebView: WKWebView?
@@ -45,7 +45,7 @@ configuration: config)
 self.containerView.addSubview(myWebView!)
 \end{verbatim}
 Somit werden auch die Constraints nur für den ContainerView gesetzt.
-Die Funktion userContentController(...) empfängt Nachrichten von JavaScript fügt diese der var headline hinzu und vergleicht die die SechTags mit der headline und öffnet den PopView mit dem angeklickten SachTag:
+Die Funktion userContentController(...) empfängt Nachrichten von JavaScript fügt diese der var headline hinzu und vergleicht die die \SEARCH-Tags mit der headline und öffnet den PopView mit dem angeklickten \SEARCH-Tag:
 \begin{verbatim}
 
     func userContentController(userContentController: WKUserContentController,
@@ -63,7 +63,7 @@ Die Funktion userContentController(...) empfängt Nachrichten von JavaScript fü
             performSegueWithIdentifier("showPopView", sender: self)
     }
 \end{verbatim}
-Die Implementiere JavaScript-Datei main.js sucht html Tags der Art "search-Link" und markiert diese Rot, und sendet eine Nachricht an das wkWebkit wenn ein sech-Tag angeklickt wird:
+Die Implementiere JavaScript-Datei main.js sucht html Tags der Art \SEARCH-Link und markiert diese Rot, und sendet eine Nachricht an das wkWebkit wenn ein \SEARCH-Tag angeklickt wird:
 \begin{verbatim}
 
 window.onload = function() {    
@@ -76,6 +76,4 @@ window.onload = function() {
     }
 }
 \end{verbatim}
-
-\pagebreak
 

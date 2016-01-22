@@ -2,19 +2,19 @@
 
 \section{Einleitung}
 
-Zum Testen der Applikation 'SEARCH-Tag-Browser' ist es erforderlich, die in einer exemplarisch erzeugten Webseite (www.sech-browser.de/tests) eingebetteten SEARCH-Tags zu überprüfen. Um idealerweise alle Problemfelder bzw. Fehler der App erkennen zu können, ist es erforderlich eine bestmögliche Abdeckung aller möglichen Testfälle zu gewährleisten.  
+Zum Testen der Applikation \SECH-Browser ist es erforderlich, die in einer exemplarisch erzeugten Webseite (www.sech-browser.de/tests) eingebetteten \SEARCH-Tags zu überprüfen. Um idealerweise alle Problemfelder bzw. Fehler der App erkennen zu können, ist es erforderlich eine bestmögliche Abdeckung aller möglichen Testfälle zu gewährleisten.  
 
 \section{Testfälle} 
 
-Um eine bestmögliche Überprüfung der App zu erreichen, wurde eine systematische Implementierung aller denkbaren Testfälle unter \url {http://www.sech-browser.de/old-index.html} vorgenommen. Wie aus der Definition der SEARCH-Tags (s. WIKI des github-Projektordners) ersichtlich, besteht das SEARCH-Tag aus den drei Teilen:
+Um eine bestmögliche Überprüfung der App zu erreichen, wurde eine systematische Implementierung aller denkbaren Testfälle unter \url{http://www.sech-browser.de/old-index.html} vorgenommen. Wie aus der Definition der \SEARCH-Tags (s. WIKI des github-Projektordners) ersichtlich, besteht das \SEARCH-Tag aus den drei Teilen:
 
 \begin {itemize} 
-   \item search-head
-   \item search-section
-   \item search-link
+   \item \SEARCH-Head
+   \item \SEARCH-Section
+   \item \SEARCH-Link
 \end {itemize}
 
-Weiterhin kann jeder Teil des SEARCH-Tags bis zu 5 Attribute enthalten:
+Weiterhin kann jeder Teil des \SEARCH-Tags bis zu 5 Attribute enthalten:
 
 \begin {itemize}
    \item topic
@@ -24,7 +24,7 @@ Weiterhin kann jeder Teil des SEARCH-Tags bis zu 5 Attribute enthalten:
    \item licence
 \end {itemize}
 
-Um alle möglichen realisierten Kombinationen der Teile der SEARCH-Tags mit den zugehörigen Attributen aufrufen zu können, wurde eine übersichtliche Menüstruktur gewählt. Zusätzlich wurden im letzten Menüpunkt 'Fehler' noch syntaktische Fehler in den Tags eingebaut, wie Weglassen von Tag-Klammern sowie Weglassen von Anführungszeichen bei Attributen oder falsch geschriebene Attributnamen.   
+Um alle möglichen realisierten Kombinationen der Teile der \SEARCH-Tags mit den zugehörigen Attributen aufrufen zu können, wurde eine übersichtliche Menüstruktur gewählt. Zusätzlich wurden im letzten Menüpunkt 'Fehler' noch syntaktische Fehler in den Tags eingebaut, wie Weglassen von Tag-Klammern sowie Weglassen von Anführungszeichen bei Attributen oder falsch geschriebene Attributnamen.   
 Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 \pagebreak
@@ -35,11 +35,11 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 % ---------- keine search-tags --------------------
 
-\flushleft \textbf{keine search-tags}
+\flushleft \textbf{keine \SEARCH-Tags}
 
 % ---------- search-head --------------------
 
-\flushleft \textbf{nur search-head}
+\flushleft \textbf{nur \SEARCH-Head}
 \begin{enumerate}
    \item mit allen Attributen
    \item mit einzelnen Attributen  
@@ -99,7 +99,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 % ---------- search-section --------------------
 
-\flushleft \textbf{nur search-section}
+\flushleft \textbf{nur \SEARCH-Section}
 
 \begin{enumerate}
   \item mit allen Attributen
@@ -154,7 +154,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 % ---------- search-link --------------------
 
-\flushleft \textbf{nur search-link}
+\flushleft \textbf{nur \SEARCH-Link}
 
 \begin{enumerate}
   \item mit allen Attributen
@@ -209,7 +209,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 % ------------- search-head und search-section ----------------------
 
-\textbf{search-head und search-section} 
+\textbf{\SEARCH-Head und \SEARCH-Section} 
 \begin{enumerate}
  	\item Standard
   	\item mit Umlauten
@@ -220,7 +220,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 % ------------- search-head und search-link ----------------------
 
-\textbf{search-head und search-link} 
+\textbf{\SEARCH-Head und \SEARCH-Link} 
 \begin{enumerate}
    \item Standard
    \item mit Umlauten
@@ -231,7 +231,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 % ------------- search-section und search-link ----------------------
 
-\textbf{search-section und search-link} 
+\textbf{\SEARCH-Section und \SEARCH-Link} 
 \begin{enumerate}
    \item Standard
    \item mit Umlauten
@@ -243,7 +243,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 % ------------- search-head, search-section und search-link ----------------------
 
-\textbf{search-head, search-section, search-link}
+\textbf{\SEARCH-Head, \SEARCH-Section, \SEARCH-Link}
 \begin{enumerate}
    \item Standard
    \item mit Umlauten
@@ -256,7 +256,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 
 \textbf{{\large Fehler}}
 
-\textbf{nur search-head}
+\textbf{nur \SEARCH-Head}
 \begin{enumerate}
 \item Anführungszeichen vorne fehlt
 \item Anführungszeichen hinten fehlt
@@ -264,7 +264,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 \item Tag-Klammer hinten fehlt
 \end{enumerate}
 
-\textbf{nur search-section}
+\textbf{nur \SEARCH-Section}
 \begin{enumerate}
 \item Anführungszeichen vorne fehlt
 \item Anführungszeichen hinten fehlt
@@ -274,7 +274,7 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 \item Ende Tag-Klammer hinten fehlt
 \end{enumerate}
 
-\textbf{nur search-link}
+\textbf{nur \SEARCH-Link}
 \begin{enumerate}
 \item Anführungszeichen vorne fehlt
 \item Anführungszeichen hinten fehlt
@@ -284,62 +284,62 @@ Die Menü-Struktur der Testfälle ist nachfolgend dargestellt:
 \item Ende Tag-Klammer hinten fehlt
 \end{enumerate}
 
-\textbf{search-head und search-section} 
+\textbf{\SEARCH-Head und \SEARCH-Section} 
 \begin{enumerate}
-\item search-head Topic Anführungszeichen vorne fehlt
-\item search-section Topic Anführungszeichen hinten fehlt
-\item search-head Tag-Klammer vorne fehlt
-\item search-section Beginn Tag-Klammer hinten fehlt
-\item search-section Ende Tag-Klammer hinten fehlt
-\item search-section nicht geschlossen
+\item \SEARCH-Head Topic Anführungszeichen vorne fehlt
+\item \SEARCH-Section Topic Anführungszeichen hinten fehlt
+\item \SEARCH-Head Tag-Klammer vorne fehlt
+\item \SEARCH-Section Beginn Tag-Klammer hinten fehlt
+\item \SEARCH-Section Ende Tag-Klammer hinten fehlt
+\item \SEARCH-Section nicht geschlossen
 \end{enumerate}
 
 \pagebreak
-\textbf{search-head und search-link} 
+\textbf{\SEARCH-Head und \SEARCH-Link} 
 \begin{enumerate}
-\item search-head Topic Anführungszeichen vorne fehlt
-\item search-link Topic Anführungszeichen hinten fehlt
-\item search-head Tag-Klammer vorne fehlt
-\item search-link Beginn Tag-Klammer hinten fehlt
-\item search-link Ende Tag-Klammer hinten fehlt
-\item search-link nicht geschlossen
+\item \SEARCH-Head Topic Anführungszeichen vorne fehlt
+\item \SEARCH-Link Topic Anführungszeichen hinten fehlt
+\item \SEARCH-Head Tag-Klammer vorne fehlt
+\item \SEARCH-Link Beginn Tag-Klammer hinten fehlt
+\item \SEARCH-Link Ende Tag-Klammer hinten fehlt
+\item \SEARCH-Link nicht geschlossen
 \end{enumerate}
 
-\textbf{search-section und search-link} 
+\textbf{\SEARCH-Section und \SEARCH-Link} 
 \begin{enumerate}
-\item search-section Topic Anführungszeichen vorne fehlt
-\item search-link Topic Anführungszeichen hinten fehlt
-\item search-section Tag-Klammer vorne fehlt
-\item search-section Ende  Tag-Klammer hinten fehlt
-\item search-section nicht geschlossen
-\item search-link Beginn Tag-Klammer hinten fehlt
-\item search-link Ende  Tag-Klammer hinten fehlt
-\item search-link nicht geschlossen
+\item \SEARCH-Section Topic Anführungszeichen vorne fehlt
+\item \SEARCH-Link Topic Anführungszeichen hinten fehlt
+\item \SEARCH-Section Tag-Klammer vorne fehlt
+\item \SEARCH-Section Ende  Tag-Klammer hinten fehlt
+\item \SEARCH-Section nicht geschlossen
+\item \SEARCH-Link Beginn Tag-Klammer hinten fehlt
+\item \SEARCH-Link Ende  Tag-Klammer hinten fehlt
+\item \SEARCH-Link nicht geschlossen
 \end{enumerate}
 
-\textbf{search-head, search-section, search-link}
+\textbf{\SEARCH-Head, \SEARCH-Section, \SEARCH-Link}
 
 \begin{enumerate}
-\item search-head falscher Attributname (topics statt topic)
-\item search-section falscher Attributname (provide statt provider)
-\item search-link falscher Attributname (license statt licence)
-\item search-head Tag-Klammer vorne fehlt
-\item search-section Tag-Klammer vorne fehlt
-\item search-section Ende  Tag-Klammer hinten fehlt
-\item search-section nicht geschlossen
-\item search-link Beginn Tag-Klammer vorne fehlt
-\item search-link Ende  Tag-Klammer hinten fehlt
-\item search-link nicht geschlossen
+\item \SEARCH-Head falscher Attributname (topics statt topic)
+\item \SEARCH-Section falscher Attributname (provide statt provider)
+\item \SEARCH-Link falscher Attributname (license statt licence)
+\item \SEARCH-Head Tag-Klammer vorne fehlt
+\item \SEARCH-Section Tag-Klammer vorne fehlt
+\item \SEARCH-Section Ende  Tag-Klammer hinten fehlt
+\item \SEARCH-Section nicht geschlossen
+\item \SEARCH-Link Beginn Tag-Klammer vorne fehlt
+\item \SEARCH-Link Ende  Tag-Klammer hinten fehlt
+\item \SEARCH-Link nicht geschlossen
 \end{enumerate}
 
 \section{Auswertung der Testfälle}
 
-Sobald nur ein search-head vorhanden ist, wird dieser nicht ausgewertet und es werden keine search-links angezeigt.
+Sobald nur ein \SEARCH-Head vorhanden ist, wird dieser nicht ausgewertet und es werden keine \SEARCH-Lnks angezeigt.
 
-Sobald nur eine oder mehrere search-sections vorhanden sind, werden diese nicht ausgewertet und es werden keine search-links angezeigt.
+Sobald nur eine oder mehrere \SEARCH-Sections vorhanden sind, werden diese nicht ausgewertet und es werden keine \SEARCH-Links angezeigt.
 
-Sobald search-links vorhanden sind, werden diese entsprechend ausgewertet und sie werden korrekt in der TableView der Search-Tags angezeigt.
+Sobald \SEARCH-Links vorhanden sind, werden diese entsprechend ausgewertet und sie werden korrekt in der TableView der\SEARCH-Tags angezeigt.
 
-Es treten Fehler auf, sobald im search-link die Anführungszeichen fehlen, denn es werden trotzdem entsprechende search-links gefunden und fehlerhaft angezeigt.
+Es treten Fehler auf, sobald im \SEARCH-Link die Anführungszeichen fehlen, denn es werden trotzdem entsprechende \SEARCH-Links gefunden und fehlerhaft angezeigt.
 
-Sobald Tag-Klammern fehlen, können diese nicht ausgewertet werden und werden nicht angezeigt.
+Sobald \SEARCH-Tag-Klammern fehlen, können diese nicht ausgewertet werden und werden nicht angezeigt.

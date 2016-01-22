@@ -10,7 +10,12 @@
   /Keywords (SECH EEXCESS Content Prototyp)
 }
 
-\pagebreak
+\section{Netzwerkverbindungen}
+
+Die Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{ConnectionManager} ist für das Erstellen einer Verbindung zum Server zuständig. Sie besitzt eine öffentliche Methode ''makeHTTP\_Request''.
+ Zusätzlich gibt es eine Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{PROJECT\_URL} für die URLs, welche im Projekt benötigt werden.
+
+\chapter{Server Anfragen}
 
 \section{Beschreibung}
 Der Content-Prototyp ermöglicht es, Anfragen an den Server des  
@@ -54,11 +59,9 @@ und somit auch das \href{https://github.com/EEXCESS/eexcess/wiki/%5B21.09.2015%5
 	\end{enumerate}
       \item Antwort wird vom ViewController:68 entgegengenommen und im TextFeld dargestellt
     \end{enumerate}
-\section{Aufbau des Prototypen}
 
-\includegraphics[scale=0.5]{KlassendiagrammContentPrototyp.png}
 \pagebreak
-\section{JSON}
+\section{JSON Objekt}
 
 Der JSON wird in der Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/Json.swift}{JSONObject} 
 gehalten. Ein Dictionary in der Klasse speichert alle Schlüssel/Wert-Paare des JSONObjects.
@@ -79,13 +82,7 @@ Die Klasse JSONObject besitzt verschiedene Methoden:
 
 Die Klasse JSONObject kann ohne großen Aufwand um weitere Methoden ergänzt werden, wie zum Beispiel um eine Methode, getImage(key:String) zu erweitern.
 
-
-\section{Netzwerkverbindungen}
-
-Die Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{ConnectionManager} ist für das Erstellen einer Verbindung zum Server zuständig. Sie besitzt eine öffentliche Methode ''makeHTTP\_Request''.
- Zusätzlich gibt es eine Klasse \href{https://github.com/SECH-Tag-EEXCESS-Browser/iOSX-App/blob/master/Team%20Content/Demos/JSON/Sech/Sech/ConnectionManager.swift}{PROJECT\_URL} für die URLs, welche im Projekt benötigt werden.
-
-\section{UI}
+\section{Prototyp UI}
 \includegraphics[scale=0.35]{ContentPrototyp2.png}
 \begin{enumerate}
 \item Eingabe der Suchbegriffe. Mit '','' werden die Begriffe getrennt und mit ''|'' werden die Suchbegriffgruppen getrennt

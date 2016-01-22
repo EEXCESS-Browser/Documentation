@@ -1,13 +1,13 @@
-\section{Websiteanalyse und Sechobjekterstellung}
+\chapter{Websiteanalyse und Sechobjekterstellung}
 
-\textbf{Vorbereitung}
+\section{Vorbereitung}
 
-Nachdem die Methode getSechObjects() im SechManager, durch den WebViewDelegate, aufgerufen wurde, wird zuerst mit der Analyse der HTML-Heads begonnen. Dies geschieht mit der Methode getSechHead(), welche ein Objekt vom Typ Tag zurückliefert. Außerdem wird in dieser Methode der Standartfilter für die EEXCESS-Anfrage erstellt und zwischen gespeichert. Falls im Body weiter Filter verwendet werden wird dieser Standartfilter überschrieben.
+Nachdem die Methode getSechObjects() im \SECH-Manager, durch den WebViewDelegate, aufgerufen wurde, wird zuerst mit der Analyse der HTML-Heads begonnen. Dies geschieht mit der Methode getSechHead(), welche ein Objekt vom Typ Tag zurückliefert. Außerdem wird in dieser Methode der Standardfilter für die EEXCESS-Anfrage erstellt und zwischen gespeichert. Falls im Body weiter Filter verwendet werden wird dieser Standardfilter überschrieben.
 
-\textbf{Analyse des Sechbodys}
+\section{Analyse des \SEARCH-Bodys}
 
-Funktion makeSech(): In dieser Methode wird der HTML-Body in Search-Links und Search-Sections aufgeteilt, entsprechend analysiert und es werden Sechobjekte erzeugt.
-Als erstes übergibt der Sechmanager dem HTML-Manager den HTML-Body um ein Array von String zurück zu bekommen. Dieses Array enthält vier unterscheidbare String-Elemente:
+Funktion makeSech(): In dieser Methode wird der HTML-Body in \SEARCH-Links und \SEARCH-Sections aufgeteilt, entsprechend analysiert und es werden \SECH-Objekte erzeugt.
+Als erstes übergibt der \SECH-Manager dem HTML-Manager den HTML-Body um ein Array von String zurück zu bekommen. Dieses Array enthält vier unterscheidbare String-Elemente:
 \begin{itemize}
 	\item HTML-Opening-Tag einer Section mit Attributen der Section
 	\item HTML-Closing-Tag einer Section
@@ -19,7 +19,7 @@ Die Methode iteriert nun über das Array und entscheidet je nach Art des String-
 \begin{itemize}
 	\item HTML-Opening-Tag SECTION: Der HTML-Manager findet heraus welche Attribute die Section hat, speichert die Section zwischen und setzt gegebenenfalls einen neuen Filter. Außerdem wird die Variable sectionIsAvailable auf true gesetzt um in den folgenden Iterationen entscheiden zu können ob ein Link in einer Section steht oder nicht.
 	\item HTML-Closing-Tag SECTION: Der Filter wird wieder zurückgesetzt und es ist keine Section mehr verfügbar.
-	\item HTML-Opening-Tag LINK: Falls eine dieser Aufruf zu tragen kommt und sectionIsAvailable gleich true ist, findet der HTML-Manager die Attribute des Links und es wird ein Sechobjekt erzeugt. Bei der Erzeugung werden der zwischengespeicherte Head und die Section, sowie ein gegebenenfalls aktualisierter Filter übergeben. Dieses erzeugte Objekt wird dann an ein Array angehängt welches bei Abschluss der Websiteanalyse zurückgegeben wird.
+	\item HTML-Opening-Tag LINK: Falls eine dieser Aufruf zu tragen kommt und sectionIsAvailable gleich true ist, findet der HTML-Manager die Attribute des Links und es wird ein \SECH-Objekt erzeugt. Bei der Erzeugung werden der zwischengespeicherte Head und die Section, sowie ein gegebenenfalls aktualisierter Filter übergeben. Dieses erzeugte Objekt wird dann an ein Array angehängt welches bei Abschluss der Websiteanalyse zurückgegeben wird.
 	\item HTML-Closing-Tag LINK: Dieses Element kann ignoriert werden, da innerhalb eines Links keine weiteren HTML-Elemente von belang stehen.
 \end{itemize}
 

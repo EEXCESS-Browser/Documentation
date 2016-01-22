@@ -29,6 +29,7 @@
 \usepackage{multido}
 \usepackage{hyperref}
 \usepackage{listings}
+\usepackage{svg}
 
 \graphicspath{{./}{./Pics/}}
 
@@ -53,7 +54,7 @@
 % #################################################################
 
 \def\SECH{S\kern-.075em \lower.5ex\hbox{E}\kern-0.05em CH\xspace}
-\def\SEARCH{S\kern-.075em \lower.5ex\hbox{E}\kern-0.05em ARCH\xspace}
+\def\SEARCH{S\kern-.075em \lower.5ex\hbox{E}\kern-0.05em AR\kern-.075em \raise.5ex\hbox{C}\kern-0.05em H\xspace}
 
 % #################################################################
 
@@ -63,11 +64,11 @@
 \title{
   \SECH--Tag--EEXCESS--Browser \\[1em]
   Programming Guide\\
-Spezifikation, Konstruktion
+Spezifikation, Konstruktion, Testfälle
 }
 
 \author{Prof. Dr. Peter Stöhr \and Gottfried von Recum \and Alexander Pöhlmann \and Tim Pohrer \and Lothar Mödl \and Burak Erol \and Brian Mairhörmann \and Andreas Netsch \and Philipp Winterholler \and Patrick Büttner \and Andreas Ziemer}
-\date{Version 0.1.1}
+\date{Version 0.2}
 
 % #################################################################
 
@@ -77,44 +78,42 @@ Spezifikation, Konstruktion
 \pagenumbering{Roman}
 \tableofcontents
 
-\listoftables
-
 \newpage
 \pagenumbering{arabic}
 
-\part*{Einleitung}
+\part{Einleitung}
 \include{intro}
 \include{mission}
 \include{eexcess}
-\part*{Spezifikation}
+\include{Zeitplanung}
 
-\part*{Konstruktion}
+\part{Spezifikation}
+\include{SEARCHtag}
+\include{Licenses}
+\include{Recherche_Partner_Provider}
+\include{UseCases}
 
-\part*{zu verteilen}
-
-%Grundfunktionen Browser
+\part{Konstruktion}
+\include{AufbauPrototyp}
 \include{funktion-browser}
 \include{addressbar}
 \include{lesezeichen}
 \include{Preferences}
 \include{WkWebKit}
-
-%Layout
+\include{WebsiteAnalyse}
+\include{sechobject}
+\include{ContentPrototyp}
+\include{Ranking}
+\include{Konstruktion_Team_Content}
 \include{Entwicklung_des_Layouts_des_Browsers}
 \include{Animation_der_TableView}
 \include{Constraints_setzen}
 \include{PopOver}
 
-%Sechobject
-  % >>Aufbau eines Sechobjekts hier?<<
-\include{sechobject}
-\include{WebsiteAnalyse}
-
-%Deine Aufteilung mit den unteren includes noch?
-\include{ContentPrototyp}
-\include{Konstruktion_Team_Content}
-\include{Licenses}
-\include{Ranking}
-\include{Recherche_Partner_Provider}
+\part{Test}
 \include{testfaelle}
+
+\newpage
+\listoffigures
+\listoftables
 \end{document}
