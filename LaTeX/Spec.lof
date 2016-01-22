@@ -8,39 +8,41 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {7.1}{\ignorespaces Use Case des Rankings\relax }}{17}{figure.caption.6}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Use Case des Browsers\relax }}{18}{figure.caption.7}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Use Case der Browser Navigation\relax }}{19}{figure.caption.8}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Use Case der Browser Lesezeichen\relax }}{19}{figure.caption.9}
-\contentsline {figure}{\numberline {7.5}{\ignorespaces Use Case der Browser Einstellungen\relax }}{20}{figure.caption.10}
-\contentsline {figure}{\numberline {7.6}{\ignorespaces Interaktion zwischen Webkit und S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tag\relax }}{20}{figure.caption.11}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Men\IeC {\"u}f\IeC {\"u}hrung des Browsers (Navigation)\relax }}{18}{figure.caption.7}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Lesezeichenverwaltung des Browsers\relax }}{18}{figure.caption.8}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces URL Navigation und S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em CH\xspace -Tabelle des Browsers\relax }}{19}{figure.caption.9}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Use Case der Browser Navigation\relax }}{19}{figure.caption.10}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces Use Case der Browser Lesezeichen\relax }}{20}{figure.caption.11}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Use Case der Browser Einstellungen\relax }}{21}{figure.caption.12}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Interaktion zwischen Webkit und S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tag\relax }}{22}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Aufbau des Prototypen\relax }}{22}{figure.caption.12}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Aufbau des Prototypen\relax }}{24}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Sequenzdiagramm Adressbar\relax }}{25}{figure.caption.13}
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Lesezeichen hinzuf\IeC {\"u}gen\relax }}{26}{figure.caption.14}
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Lesezeichen bearbeiten\relax }}{27}{figure.caption.15}
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Lesezeichen anzeigen\relax }}{28}{figure.caption.16}
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Lesezeichen l\IeC {\"o}schen\relax }}{29}{figure.caption.17}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {13.1}{\ignorespaces Ablauf der Erstellung eines S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em CH\xspace -Objektes\relax }}{37}{figure.caption.19}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Sequenzdiagramm Adressbar\relax }}{27}{figure.caption.15}
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Lesezeichen hinzuf\IeC {\"u}gen\relax }}{28}{figure.caption.16}
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Lesezeichen bearbeiten\relax }}{29}{figure.caption.17}
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Lesezeichen anzeigen\relax }}{30}{figure.caption.18}
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Lesezeichen l\IeC {\"o}schen\relax }}{31}{figure.caption.19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {15.1}{\ignorespaces Ablauf des Rankings\relax }}{44}{figure.caption.20}
-\contentsline {figure}{\numberline {15.2}{\ignorespaces Detailablauf Ranking\relax }}{45}{figure.caption.21}
-\contentsline {figure}{\numberline {15.3}{\ignorespaces Sequenzdiagramm des Rankings\relax }}{46}{figure.caption.22}
-\contentsline {figure}{\numberline {15.4}{\ignorespaces Klassendiagramm des Rankings\relax }}{47}{figure.caption.23}
-\contentsline {figure}{\numberline {15.5}{\ignorespaces Sequenzdiagramm einer Serveranfrage\relax }}{48}{figure.caption.24}
-\contentsline {figure}{\numberline {15.6}{\ignorespaces Klassendiagramm einer Serveranfrage\relax }}{49}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {16.1}{\ignorespaces Browser im Hochformat\relax }}{51}{figure.caption.26}
-\contentsline {figure}{\numberline {16.2}{\ignorespaces Anzahl der S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tags\relax }}{52}{figure.caption.27}
-\contentsline {figure}{\numberline {16.3}{\ignorespaces S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tabelle aufgeklappt\relax }}{53}{figure.caption.28}
-\contentsline {figure}{\numberline {16.4}{\ignorespaces S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tabelle versteckt\relax }}{53}{figure.caption.29}
-\contentsline {figure}{\numberline {16.5}{\ignorespaces Hochformat des Browsers\relax }}{55}{figure.caption.30}
-\contentsline {figure}{\numberline {16.6}{\ignorespaces Querformat des Browsers\relax }}{55}{figure.caption.31}
-\contentsline {figure}{\numberline {16.7}{\ignorespaces Liste f\IeC {\"u}r angeklickten S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tag\relax }}{56}{figure.caption.32}
-\contentsline {figure}{\numberline {16.8}{\ignorespaces Liste aller Suchergebnisse\relax }}{57}{figure.caption.33}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {13.1}{\ignorespaces Ablauf der Erstellung eines S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em CH\xspace -Objektes\relax }}{39}{figure.caption.21}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {15.1}{\ignorespaces Ablauf des Rankings\relax }}{46}{figure.caption.22}
+\contentsline {figure}{\numberline {15.2}{\ignorespaces Detailablauf Ranking\relax }}{47}{figure.caption.23}
+\contentsline {figure}{\numberline {15.3}{\ignorespaces Sequenzdiagramm des Rankings\relax }}{48}{figure.caption.24}
+\contentsline {figure}{\numberline {15.4}{\ignorespaces Klassendiagramm des Rankings\relax }}{49}{figure.caption.25}
+\contentsline {figure}{\numberline {15.5}{\ignorespaces Sequenzdiagramm einer Serveranfrage\relax }}{50}{figure.caption.26}
+\contentsline {figure}{\numberline {15.6}{\ignorespaces Klassendiagramm einer Serveranfrage\relax }}{51}{figure.caption.27}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {16.1}{\ignorespaces Browser im Hochformat\relax }}{53}{figure.caption.28}
+\contentsline {figure}{\numberline {16.2}{\ignorespaces Anzahl der S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tags\relax }}{54}{figure.caption.29}
+\contentsline {figure}{\numberline {16.3}{\ignorespaces S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tabelle aufgeklappt\relax }}{55}{figure.caption.30}
+\contentsline {figure}{\numberline {16.4}{\ignorespaces S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tabelle versteckt\relax }}{55}{figure.caption.31}
+\contentsline {figure}{\numberline {16.5}{\ignorespaces Hochformat des Browsers\relax }}{57}{figure.caption.32}
+\contentsline {figure}{\numberline {16.6}{\ignorespaces Querformat des Browsers\relax }}{57}{figure.caption.33}
+\contentsline {figure}{\numberline {16.7}{\ignorespaces Liste f\IeC {\"u}r angeklickten S\kern -.075em \lower .5ex\hbox {E}\kern -0.05em AR\kern -.075em \raise .5ex\hbox {C}\kern -0.05em H\xspace -Tag\relax }}{58}{figure.caption.34}
+\contentsline {figure}{\numberline {16.8}{\ignorespaces Liste aller Suchergebnisse\relax }}{59}{figure.caption.35}
 \addvspace {10\p@ }
